@@ -1,0 +1,6024 @@
+commit b5603d8ee2bc0861e26426d7c4a9f09b6adee644
+Merge: 442ebc01 5424e17c
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Jul 30 11:59:06 2020 -0700
+
+    Merge pull request #1220 from greed42/plugin-certificates
+    
+    Update python base
+
+commit 5424e17c85b0dfc655055ced3dd6ee70693c91b0
+Author: Graham Reed <greed@7deadly.org>
+Date:   Thu Jul 30 18:19:58 2020 +0100
+
+    Update python base
+    
+    To get auth plugin support for client certificates, ref. kubernetes-client/python-base#205
+
+commit 442ebc019056c2dc246be94f85cf61f1e1d26a88
+Merge: bc79976e 22555d9f
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Jul 20 09:58:52 2020 -0700
+
+    Merge pull request #1204 from palnabarun/update-upstream-1-16-14
+    
+    Update upstream version to 1.16.14
+
+commit 22555d9fa574c90c3c62f3e3e1e0bf3e72a02617
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jul 20 22:07:30 2020 +0530
+
+    Update upstream version to 1.16.14
+    
+    There has been no API changes between 1.16.11 and 1.16.14
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit bc79976edfe01b028aef0b93bde54e002b113443
+Merge: e60d9212 08ed6c24
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Jul 20 09:06:51 2020 -0700
+
+    Merge pull request #1188 from palnabarun/update-openapi-generator
+    
+    Update OpenAPI generator and the client
+
+commit 08ed6c24fb179f5dd0149c41e8e13bfb9092b71e
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Sat Jul 18 23:08:42 2020 +0530
+
+    Collate OpenAPI generator changes by version
+    
+    The changes have been listed in the CHANGELOG and linked to the
+    respective milestone pull requests.
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit 2a664669bc37fdd397a722022b001a54c4b62aaf
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Sat Jul 18 21:07:59 2020 +0530
+
+    Update CHANGELOG with latest changes from python-base
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit 9a20c56cd5ff005a130e427d251c1b15561de845
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Thu Jul 16 13:40:58 2020 +0530
+
+    Updates python-base submodule
+    
+    Update from 49ec06096ebc4e092c1ebc2291bf18ccaac935af to fb86b8acb66830b098c691fa14f4e6edbf9f7317
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit 47768af1363493905b3aee97c094252da28a2b3f
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jun 22 21:51:05 2020 +0530
+
+    Update the hotfix script
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit da2579a56ec0b143fd87cb3e31900731bd05d543
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jun 22 21:08:16 2020 +0530
+
+    Update CHANGELOG with changes from python-base submodule
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit dae828587860757414d1f3c6458cde4370ecd7a8
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jun 22 20:55:37 2020 +0530
+
+    Cherry pick test for API client context manager
+    
+    The implementation and tests were already picked up by the upstream OpenAPI
+    generator [here](https://github.com/OpenAPITools/openapi-generator/pull/5094).
+    Patching in the tests here for correctness and clarity.
+    
+    Reference: https://github.com/kubernetes-client/python/pull/1073
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit 146119213c6d96301b475f49cedde830e0f8e84f
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jun 22 20:46:20 2020 +0530
+
+    Add kubernetes.client.apis as an alias to kubernetes.client.api
+    
+    Reference: https://github.com/kubernetes-client/python/issues/974
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit b78f5cfd6e6d949e47c9e3d5952a3856d8ad9f84
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jun 22 20:43:11 2020 +0530
+
+    Fix custom objects API to preserve backward compatibility
+    
+    Reference:
+    - [#866](https://github.com/kubernetes-client/python/issues/866)
+    - [#959](https://github.com/kubernetes-client/python/pull/959)
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit dea6754f9f1333b4f5df75112d60306f8e7be844
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jun 22 20:33:06 2020 +0530
+
+    Update CHANGELOG
+    
+    The upstream 1.16 API moved ahead due to [patch releases](https://github.com/kubernetes/sig-release/blob/master/releases/patch-releases.md).
+    
+    The logs are gathered from the upstream [CHANGELOG](https://raw.githubusercontent.com/kubernetes/kubernetes/master/CHANGELOG/CHANGELOG-1.16.md).
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit ec9c944f076999543cd2122aff2d86f969d82548
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jun 22 20:52:39 2020 +0530
+
+    Remove tests since they have syntactical issues and are noop
+    
+    Reference: https://github.com/OpenAPITools/openapi-generator/issues/5377
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit b4d11b02a3479e63957a729614a616002f13e9c4
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jun 22 20:27:40 2020 +0530
+
+    Update client with OpenAPI generator v4.3.0
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit e60d9212c6a451a8617e2116fe49589213fad73b
+Merge: 10671f94 17dc22ed
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Jun 29 15:45:59 2020 -0700
+
+    Merge pull request #1194 from ACXLM/update-python-base
+    
+    update python base
+
+commit 17dc22ed589ee678820f1c8070fd249c921edefd
+Author: ACXLM <hui.zhu@daocloud.io>
+Date:   Fri Jun 26 12:23:41 2020 +0800
+
+    update python base
+
+commit 10671f94264265d4af491b7b327042cb3e0a07ad
+Merge: b6e4ae81 3866e964
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Jun 22 09:12:39 2020 -0700
+
+    Merge pull request #1187 from palnabarun/fix-github-actions-issue
+    
+    Fix the issue with Github Actions
+
+commit 3866e9642bdbd1bd05948bdd02282bbe23705330
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Jun 22 19:14:37 2020 +0530
+
+    Fix the issue with Github Actions
+    
+    The submodule needs to be synced when checking out the repository.
+    
+    Ref: https://github.com/actions/checkout
+    
+    Signed-off-by: Nabarun Pal <pal.nabarun95@gmail.com>
+
+commit b6e4ae81a2afb49f668a142eb7d1c6e2571ef478
+Merge: 7763e37b f7d0f126
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue May 26 10:25:13 2020 -0700
+
+    Merge pull request #1161 from zshihang/master
+    
+    update python-base
+
+commit 7763e37b7d8ca6e966716ad82d54f82f3e341cd4
+Merge: cef5e9bd bdd32dd9
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed May 13 18:00:22 2020 -0700
+
+    Merge pull request #1166 from roycaihw/github-actions
+    
+    Add github actions
+
+commit f7d0f126b4e34dfcb228a6539b370f4f14aa34c4
+Author: Shihang Zhang <zshihang@google.com>
+Date:   Tue May 5 12:17:42 2020 -0700
+
+    update python-base
+
+commit cef5e9bd10a6d5ca4d9c83da46ccfe2114cdaaf8
+Merge: d63282e8 6e62c3dd
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue May 12 15:02:26 2020 -0700
+
+    Merge pull request #1155 from MoShitrit/fix-issue-967
+    
+    Update Examples to stop using deprecated versions
+
+commit 6e62c3dd97cdec2def2d8369a0b6e70a4489be43
+Author: MoShitrit <moshe.shitrit@salesloft.com>
+Date:   Mon May 11 19:48:54 2020 -0400
+
+    Reverting some changed that were made by IDE
+
+commit bdd32dd938b290a61dd5203b283e6c6c5c28cb65
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon May 11 16:05:31 2020 -0700
+
+    add github actions
+
+commit d63282e8d3e8fc0650a6784d596e5a6899110b89
+Merge: 99160c9a afd837a9
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon May 11 14:28:21 2020 -0700
+
+    Merge pull request #1141 from palnabarun/snaphot-client-k8s-release-1.16
+    
+    Snapshot the Kubernetes 1.16 release
+
+commit 99160c9ad2645109fd76914fd0f4a41a47b62ee2
+Merge: 10a7f954 a318e83c
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Sat May 9 21:15:50 2020 -0700
+
+    Merge pull request #1160 from MoShitrit/issue-1157
+    
+    Add resources requests and limits to create_deployment example
+
+commit a318e83c3714e5a3b6706af5ec4b3f4cdf038bea
+Author: MoShitrit <moshe.shitrit@salesloft.com>
+Date:   Tue May 5 00:36:33 2020 -0400
+
+    Expand the deployment_crud example to include requests and limits specification
+
+commit 1a1ae19371cda865c17844d60589eb5c6e013a67
+Author: MoShitrit <moshe.shitrit@salesloft.com>
+Date:   Wed Apr 29 19:04:34 2020 -0400
+
+    Update documentation to stop using deprecated versions.
+
+commit afd837a98e8fb419c4f67acadfd37de7e6efd3e6
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Wed Apr 29 05:19:01 2020 +0530
+
+    Add 1.16 API changes to CHANGELOG
+    
+    The changes are collected from upstream
+    [CHANGELOG](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.16.md)
+
+commit 10a7f95435c0b94a6d949ba98375f8cc85a70e5a
+Merge: ad2dc955 9d862b74
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Apr 14 13:08:03 2020 -0700
+
+    Merge pull request #1146 from terrytangyuan/patch-1
+    
+    Doc improvement: PyPi -> PyPI
+
+commit 9d862b740e9e6027f25df6f978c20c748a1f78f7
+Author: Yuan Tang <terrytangyuan@gmail.com>
+Date:   Tue Apr 14 16:05:45 2020 -0400
+
+    Doc improvement: PyPi -> PyPI
+
+commit 739665e677409f8fd1b706c76b558c6d91f0c705
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Fri Apr 3 01:47:30 2020 +0530
+
+    Apply hotfixes
+
+commit c206745dcd491d64b63260c6b6f46e3a3a81b101
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Fri Apr 3 01:46:00 2020 +0530
+
+    Generate updated client
+
+commit 3f0e7c7f22eb3825180d07a9af3706d044aa282a
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Mar 30 23:15:54 2020 +0530
+
+    Update constants
+    
+    - KUBERNETES_BRANCH to "release-1.16"
+    - CLIENT_VERSION to "12.0.0-snapshot"
+    - DEVELOPMENT_STATUS to "3 - Alpha"
+
+commit ad2dc9552fba06570909bedaf6d65d01a161a185
+Merge: a6eac2d8 86f3a8ec
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Mar 30 09:39:55 2020 -0700
+
+    Merge pull request #1129 from palnabarun/update-submodule
+    
+    Update the base submodule
+
+commit 86f3a8ec96bfcde32f8d43e5eef1587057324104
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Mon Mar 30 22:03:19 2020 +0530
+
+    Update the base submodule
+    
+    CHANGELOG
+    ---
+    - Logs are no longer unmarshalled when streaming [kubernetes-client/python-base#185](https://github.com/kubernetes-client/python-base/pulls/185)
+
+commit a6eac2d85317954281ca98e3e1681ac6d77a6512
+Merge: 943e06c5 337571ea
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Sun Mar 29 21:35:53 2020 -0700
+
+    Merge pull request #1113 from palnabarun/cherry-pick-10.1.0-changelog
+    
+    Cherry pick v10.1.0 changelog from #1091
+
+commit 943e06c5ce494ff28e3d4cf676d246cd4a40dacd
+Merge: 9f245de3 1d2417b5
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Sun Mar 29 21:33:54 2020 -0700
+
+    Merge pull request #1103 from palnabarun/hotfix-process
+    
+    Update the hotfix patch list and add a script to automate the patching process
+
+commit 9f245de3e15d3131b13c9c0eb426c530253c385f
+Merge: 686acd26 be66f96c
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Mar 27 18:33:53 2020 -0700
+
+    Merge pull request #1126 from tomplus/fix/e2e-conntrack
+    
+    fix: e2e tests with conntrack required by k8s/minikube
+
+commit be66f96cdf2cd0ed3ed285f0209881e31322df9c
+Author: Tomasz Prus <tomasz.prus@gmail.com>
+Date:   Sat Mar 28 02:10:38 2020 +0100
+
+    fix: e2e tests with conntrack required by k8s/minikube
+
+commit 686acd26e88a31b232f910baa3751adb8b44fb03
+Merge: 6ce1ac40 2f34a1ce
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Mar 24 21:13:03 2020 -0700
+
+    Merge pull request #1120 from DasyDong/feature/spell-typos
+    
+    Run spell check tools to fix typos:
+
+commit 2f34a1ce9491cf9332f581b2207b72f0d0ab8f78
+Author: dasydong <dasydong@gmail.com>
+Date:   Tue Mar 24 15:53:59 2020 +0800
+
+    Run spell check tools to fix typos:
+    gihub > github
+    hehavior > behavior
+    quanity > quantity
+
+commit 1d2417b5d15bf14810d13381926732b7a7b24699
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Wed Mar 11 18:08:26 2020 +0530
+
+    Update release instructions for hot patches
+
+commit 7fa08b4b7588812c22db7d05bc3d2d38e81b5000
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Wed Mar 11 18:08:08 2020 +0530
+
+    Add a script to apply hotfixes.sh
+
+commit 337571ea9ae8a7859d1e8d1908ee7d8f198301ab
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Sat Mar 14 01:44:40 2020 +0530
+
+    Cherry pick v10.1.0 changelog from #1091
+
+commit 6ce1ac40811ffe23f441c61991d4fb05a08207f3
+Merge: cd814661 13ddbc99
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Mar 12 16:24:39 2020 -0700
+
+    Merge pull request #1104 from palnabarun/11.0-stable-changelogs
+    
+    Cherry-pick CHANGELOG and README from release 11.0 branch
+
+commit 13ddbc9990a7be0fb9bb9a60d7c1a4a645824516
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Fri Mar 13 00:26:10 2020 +0530
+
+    Update CHANGELOG with a missed bug fix
+    
+    Ref: #1073
+
+commit cd8146613120ae1b28893410d695d6586fedb759
+Merge: cef73f6d 90617036
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Mar 11 20:46:37 2020 -0700
+
+    Merge pull request #1106 from roycaihw/compatibility-matrix
+    
+    Improve compatibility-matrix documentation in alignment with client-go
+
+commit 90617036e950c5ef1cf294ebbceb3bd254699383
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Mar 11 18:41:53 2020 -0700
+
+    improve compatibility-matrix documentation in alignment with client-go
+
+commit cef73f6dee0cbcd6b2158af012234e44ef24e365
+Merge: cbf95cf6 52575ce8
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Mar 11 09:51:38 2020 -0700
+
+    Merge pull request #1102 from palnabarun/travis-fix
+    
+    Fix verify_tag build stage in Travis pipeline
+
+commit ac3d19a26c9a343633cb9964259f477b4cc72781
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Tue Mar 3 21:59:51 2020 +0530
+
+    Update CHANGELOG
+
+commit 52575ce84e483db1bbcb89a937f2c0a3ffe28aa1
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Wed Mar 11 12:46:44 2020 +0530
+
+    Fix verify_tag build stage in Travis pipeline
+
+commit cbf95cf61eab683b1d5e5d6f84a1d5742b0d3a9a
+Merge: 6b560a4f a930885a
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Mar 10 10:53:36 2020 -0700
+
+    Merge pull request #1101 from fabianvf/travis-verify-tag
+    
+    Travis configuration now does extra tag validation
+
+commit a930885aaf3ed7122af420e34fd308704e3ed250
+Author: Fabian von Feilitzsch <fabian@fabianism.us>
+Date:   Tue Mar 10 13:05:15 2020 -0400
+
+    Validate that travis tag matches semver
+
+commit a12fff7ff379e4ce9326c3f8f18fface9e782304
+Author: Fabian von Feilitzsch <fabian@fabianism.us>
+Date:   Tue Mar 10 12:20:23 2020 -0400
+
+    Script needs to be a string
+
+commit 16ec8c42576335dfabe34d90189568ddd47ead83
+Author: Fabian von Feilitzsch <fabian@fabianism.us>
+Date:   Tue Mar 10 11:10:32 2020 -0400
+
+    Travis configuration now does extra tag validation
+    
+    Separate build matrix into 3 stages - verify-tag, test, and deploy
+    - verify-tag compares the kubernetes.__version__ to $TRAVIS_TAG. Only
+    runs on pushed tags
+    - test runs the actual tests
+    - deploy deploys the package to pypi. Only runs on pushed tags
+
+commit 6b560a4f3140a4fc0e8dc2d169c0952d7352cffd
+Merge: 3792b199 f2a54c14
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Mar 9 14:43:36 2020 -0700
+
+    Merge pull request #1100 from roycaihw/redo-pypi-token
+    
+    Redo pypi token encryption for travis ci deployment
+
+commit f2a54c1450261fc03011e7114c470938fc0f18f1
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Mar 9 12:42:56 2020 -0700
+
+    redo pypi token encryption for travis
+
+commit 3792b199ca7f149cb288b8754d2ac1f9821e9a29
+Merge: 4bb1e7bf f96f29b4
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Mar 9 10:13:36 2020 -0700
+
+    Merge pull request #1099 from roycaihw/travis-pypi-deploy
+    
+    Support travis pypi deployment
+
+commit f96f29b4f063eaaf0d6c863e27f266b8f3fd4d77
+Author: Haowei Cai <haoweic@google.com>
+Date:   Sun Mar 8 22:13:48 2020 -0700
+
+    support travis pypi deployment
+
+commit 4bb1e7bf38381b45c17f63400b21ba2bbb553e8c
+Merge: 1fa9f89c dac7ee16
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Mar 2 16:05:38 2020 -0800
+
+    Merge pull request #1096 from micw523/patch-2
+    
+    Add kubernetes.dynamic to setup.py pkg list
+
+commit dac7ee161b64b55b7ad2e231790fd1994c401373
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Mon Mar 2 16:37:19 2020 -0600
+
+    Add kubernetes.dynamic to setup.py pkg list
+
+commit 1fa9f89c39aefda527c059c9c8da33d3b73183c1
+Merge: 073cf4d8 f452d0ce
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Mar 2 13:43:38 2020 -0800
+
+    Merge pull request #1087 from roycaihw/watch-e2e
+    
+    add basic watch configmap e2e test
+
+commit f452d0cef62f829bbfe0d3d6e811668e38dbeb8c
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Feb 21 17:37:44 2020 -0800
+
+    add basic watch configmap e2e test
+
+commit 073cf4d89e532f92b57e8955b4efc3d5d5eb80cf
+Merge: 41f11a09 93ec66a2
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Feb 24 12:19:36 2020 -0800
+
+    Merge pull request #1090 from iamneha/neha/changelog
+    
+    Update CHANGELOG to include 10.0.1
+
+commit 93ec66a2f6c6d1e009990e2b91baa8a771fd956f
+Author: iamneha <inehayadav28@gmail.com>
+Date:   Mon Feb 24 20:48:23 2020 +0100
+
+    Update CHANGELOG to include 10.0.1
+
+commit 41f11a09995efcd0142e25946adc7591431bfb2f
+Merge: dc292951 4d1896cb
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Sun Feb 23 18:12:47 2020 -0800
+
+    Merge pull request #1089 from fooka03/master
+    
+    Merge apiserver_id get fix from python-base
+
+commit 4d1896cb5221ed8d4e45dc42d6ac82b72accf8d0
+Author: Nigel Foucha <nigel.foucha@bossanova.com>
+Date:   Sun Feb 23 14:04:23 2020 -0500
+
+    Merge apiserver_id get fix from python-base
+
+commit dc292951637b75968a4ed169ba73f9a824153799
+Merge: f4932728 d5d2a6ae
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Feb 20 10:31:58 2020 -0800
+
+    Merge pull request #1051 from palnabarun/release-11.0-master-update
+    
+    Update README and CHANGELOG for 11.0.0 stable release
+
+commit f493272827ed31575b87a522a4206f446a1e12f6
+Merge: 390f3cfd de596e93
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Feb 18 16:14:25 2020 -0800
+
+    Merge pull request #1083 from roycaihw/enable-debug
+    
+    Add example code for enabling debugging
+
+commit de596e931743b210f4628d92dbcdd2ee2e7bc321
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Feb 18 12:41:51 2020 -0800
+
+    debug log example
+
+commit 390f3cfd2bd4099f7e17b7196a37b201f291d62f
+Merge: 9117d6fd 4bb5c1fa
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Feb 11 14:44:07 2020 -0800
+
+    Merge pull request #1038 from micw523/contrib-1
+    
+    Grammar fixes to contributing doc
+
+commit 9117d6fd7f5b473498362fc7ce89813f1bab430b
+Merge: 0976d59d e0794ec5
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Feb 10 15:49:55 2020 -0800
+
+    Merge pull request #1076 from roycaihw/release-hot-issues
+    
+    Document hot issues in release process
+
+commit e0794ec5a60f1235efaf5b6505cf8c9e38ff8afb
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Feb 10 15:09:15 2020 -0800
+
+    Document hot issues in release process
+
+commit 0976d59d6ff206f2f428cabc7a6b7b1144843b2a
+Merge: 5181d238 13dffb89
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Feb 10 14:07:54 2020 -0800
+
+    Merge pull request #1073 from fabianvf/fix-py3-hang
+    
+    Cleanup ThreadPool with atexit rather than __del__
+
+commit 13dffb897617f87aaaee247095107d7011e002d5
+Author: Fabian von Feilitzsch <fabian@fabianism.us>
+Date:   Thu Feb 6 12:37:16 2020 -0500
+
+    Add test to ensure kubernetes client threadpool is cleaned up
+
+commit 18d21df367bf9ab5554635f5c6d107f2cf2206a5
+Author: Fabian von Feilitzsch <fabian@fabianism.us>
+Date:   Thu Feb 6 12:05:23 2020 -0500
+
+    Cleanup ThreadPool with atexit rather than __del__
+    
+    This removes the __del__ function from the generated Python client,
+    and replaces it with a cleanup function. When a ThreadPool is created,
+    the cleanup function is registered with the atexit module.
+    
+    This PR also allows the client to be used as a context manager, which
+    will automatically clean up after itself rather than having to wait til
+    process exit.
+    
+    This fixes issue #1037, where the API client could hang indefinitely at
+    garbage collection.
+
+commit 4bb5c1fadf28a9cf6cda8ed6f167bf256da969d4
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Wed Jan 15 13:50:39 2020 -0600
+
+    more fixes and add more information
+
+commit d5d2a6ae112bae4b8adaa5c8cc8506137c1c0c4a
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Thu Jan 9 11:16:00 2020 +0530
+
+    Updates README
+
+commit 5181d2389eacd92fa0f72237da87286ed0d45a3e
+Merge: 96766c2d 59171faa
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Jan 9 09:15:46 2020 -0800
+
+    Merge pull request #1049 from eagerworks/fix_custom_object_doc
+    
+    Fix Custom Objects API example
+
+commit 07cddc3f942449f0e7da75c6c6c258c3c69cc0c3
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Thu Jan 9 10:37:28 2020 -0600
+
+    minor grammar fix
+
+commit ad1eec573ed6f13b0261fc154fef07f66ea39e44
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Thu Jan 9 11:15:49 2020 +0530
+
+    Updates CHANGELOG
+
+commit 59171faa72c4f20b11867da15ad8b5cdcd1c9730
+Author: JP Balarini <jpbalarini@gmail.com>
+Date:   Wed Jan 8 17:53:34 2020 -0300
+
+    Fix custom object API example
+
+commit 96766c2d59c63edb25f51765e716e20be2a6e62e
+Merge: 3634a72d 6a27be5c
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Jan 6 10:16:17 2020 -0800
+
+    Merge pull request #1035 from micw523/enable-dynamic
+    
+    Enables the use of dynamic client
+
+commit b4e906555b2b108669a49e67c37822579641309e
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Mon Dec 23 17:15:24 2019 -0600
+
+    Grammar fixes to contributing doc
+
+commit 3634a72ddc0ea104ce6a0a852f7ea240d2cb3ee3
+Merge: 039f167b 5b94a9a5
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Dec 23 11:23:33 2019 -0800
+
+    Merge pull request #1007 from cclauss/patch-1
+    
+    Use ==/!= to compare str, bytes, and int literals
+
+commit 039f167bfff470abdfa8720c020a8f4a40e1e891
+Merge: b871710b e16f98e7
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Dec 23 11:21:33 2019 -0800
+
+    Merge pull request #1031 from micw523/contrib
+    
+    Add Contribution 101
+
+commit b871710b8bda29def1c28aad5c69087e7a6d0bb6
+Merge: 706da45e 02232a2e
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Dec 18 14:27:12 2019 -0800
+
+    Merge pull request #1036 from micw523/api
+    
+    Fix deprecation warning in e2e tests
+
+commit 02232a2e22f9d2e7efd2db337b06be1f5ce23947
+Author: micw523 <micw@umich.edu>
+Date:   Wed Dec 18 15:38:27 2019 -0600
+
+    Change apis to api
+
+commit 6a27be5cd210b2e63b71d64178c4647d81776a9e
+Author: micw523 <micw@umich.edu>
+Date:   Wed Dec 18 15:18:20 2019 -0600
+
+    enable dynamic client
+
+commit 706da45eb22338177152bf326ef6640eb762af5b
+Merge: ccd3ce4f 5be68683
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Dec 18 12:43:57 2019 -0800
+
+    Merge pull request #1034 from micw523/rm-swagger
+    
+    Remove .swagger-codegen
+
+commit 5be686830428ef90c3519c97a1c521511b3445fd
+Author: micw523 <micw@umich.edu>
+Date:   Wed Dec 18 14:04:05 2019 -0600
+
+    Remove .swagger-codegen
+
+commit e16f98e766b68d607048c8f638c419c1c3ef4681
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Tue Dec 17 13:35:16 2019 -0600
+
+    Change base repo update to use a single line
+
+commit f96667756300fa1c100e62ca9255442428a28ec0
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Mon Dec 16 16:38:06 2019 -0600
+
+    Format changes, add contents
+
+commit a33906c485e261f9108c6adcd49ebe98f7e9f0aa
+Author: micw523 <micw@umich.edu>
+Date:   Fri Dec 13 16:00:37 2019 -0500
+
+    Add contribution 101
+
+commit ccd3ce4fc27ed202864f9b3f971744a5ebf6ad7e
+Merge: 579e96f5 16911e3e
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Nov 22 19:41:50 2019 -0800
+
+    Merge pull request #1015 from roycaihw/master
+    
+    Update README and CHANGELOG in master branch
+
+commit 16911e3e8df620606e62208f15a194348d1bbd65
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Nov 22 12:00:09 2019 -0800
+
+    update README
+
+commit eb805aab8673225ca560fe5efe9bc2171d254218
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Nov 22 11:56:47 2019 -0800
+
+    update changelog
+
+commit 579e96f5c61cfc14ef4e99cf8a61db827bc75860
+Merge: 02ef5be4 9859cb7c
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Nov 22 11:38:43 2019 -0800
+
+    Merge pull request #1011 from tomplus/master
+    
+    fix: add client.api package to setup.py
+
+commit 9859cb7cce21c93c3a0ad5ee5369cebf01abf02b
+Author: Tomasz Prus <tomasz.prus@gmail.com>
+Date:   Thu Nov 21 10:29:03 2019 +0100
+
+    fix: add client.api package to setup.py
+
+commit 5b94a9a5da51b360d4c03008461d48467f9c1318
+Author: Christian Clauss <cclauss@me.com>
+Date:   Sat Nov 16 14:12:46 2019 +0100
+
+    Use ==/!= to compare str, bytes, and int literals
+    
+    Identity is not the same thing as equality in Python so use ==/!= to compare str, bytes, and int literals. On n Python >= 3.8, these instances will raise SyntaxWarnings so it is best to fix them now. https://docs.python.org/3.8/whatsnew/3.8.html#porting-to-python-3-8
+
+commit 02ef5be4ecead787961037b236ae498944040b43
+Merge: 3739db03 b3164930
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Nov 15 10:50:32 2019 -0800
+
+    Merge pull request #995 from roycaihw/11.0.0-snapshot
+    
+    Generate 11.0.0-snapshot client
+
+commit b3164930dd1789dd66915acd6772f92f512cec47
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Nov 11 14:07:57 2019 -0800
+
+    turn on warning filter to print deprecation warning by default
+
+commit 9d29ac1ded2e80b80a408d21d460565af2ed403c
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Nov 11 12:05:27 2019 -0800
+
+    use new module name in example
+
+commit 64beb034801b98e5c0e49980cf101a01b611754e
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Oct 29 12:29:49 2019 -0700
+
+    update CHANGELOG for master branch changes
+
+commit 9959273625b999ae9a8f0679c4def2ee7d699ede
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Oct 29 10:59:33 2019 -0700
+
+    hotfix for patching custom objects issue#866
+
+commit dee078639b5e848db73232397087a81f1a336510
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Oct 29 09:33:46 2019 -0700
+
+    Add alias package kubernetes.client.apis with deprecation warning
+
+commit 5cddbde0bfa2c8e10488978b0294f69c75fe0889
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Oct 29 09:24:17 2019 -0700
+
+    generated client change for 11.0.0-snapshot
+
+commit 6c015d1f9dbaf1af7865aafddd60e63c9b94ea82
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Oct 29 09:09:55 2019 -0700
+
+    update version constants for master branch
+
+commit 778b25d87fc7fd65540b1f71dd523033242c7fac
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Oct 29 09:08:35 2019 -0700
+
+    update base submodule, update CHANGELOG and include CHANGELOG from 11.0.0a1
+
+commit 3739db034d34b035bc8141740e9073c84ab192c0
+Merge: 3aea166b be0a7522
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Oct 31 18:08:53 2019 -0700
+
+    Merge pull request #865 from ymalen/patch-1
+    
+    Update README.md
+
+commit 3aea166b7a2a7378c7a7df267536a30cc6874e0b
+Merge: ca4f3119 f1339b86
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Oct 31 18:04:54 2019 -0700
+
+    Merge pull request #981 from fooka03/master
+    
+    Merge azure refresh fix from python-base
+
+commit be0a7522406a7fbf71727248ea1e5c2e2525777b
+Merge: d89c7f6a ca4f3119
+Author: Yacov Malen <49476663+ymalen@users.noreply.github.com>
+Date:   Wed Oct 23 11:10:48 2019 +0300
+
+    Merge branch 'master' into patch-1
+
+commit d89c7f6a5fdf7ba24571a0fc15ff7b5a93dd631d
+Author: Yacov Malen <49476663+ymalen@users.noreply.github.com>
+Date:   Wed Oct 23 11:06:53 2019 +0300
+
+    Update README.md
+
+commit ca4f31198e9748f1075af0e02abb8f7e1e174159
+Merge: 9c205e61 4d858922
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Oct 16 15:18:40 2019 -0700
+
+    Merge pull request #970 from Jamim/feature/python3.8-tests
+    
+    Enable testing for Python 3.8
+
+commit 4d858922f15ed6facfd497ecb6c78ef3140778fb
+Author: Aliaksei Urbanski <mimworkmail@gmail.com>
+Date:   Wed Oct 16 23:50:01 2019 +0300
+
+    Enable testing for Python 3.8
+    
+    Python 3.8 is there, so I believe that it would be nice
+    to declare support and add tests for it on CI.
+    
+    Python 3.8.0 release announcement:
+    https://discuss.python.org/t/python-3-8-0-is-now-available/2478
+
+commit 9c205e6147ed2c6a9e70908cb4464a376b1de482
+Merge: 2dfb3035 064b80e0
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Oct 16 09:45:31 2019 -0700
+
+    Merge pull request #978 from palnabarun/coverage-pytest-port
+    
+    Port coverage report generation to pytest
+
+commit 064b80e0cd7377d0161db93f09fcb269c259705d
+Author: Nabarun Pal <pal.nabarun95@gmail.com>
+Date:   Sun Oct 6 09:21:22 2019 +0530
+
+    Moves coverage report generation to pytest from nosetests
+    
+    Adds pytest-cov to requirements
+
+commit f1339b864d05485708c4b1ac0e876fd135018110
+Author: Nigel Foucha <nigel.foucha@bossanova.com>
+Date:   Wed Oct 9 13:18:10 2019 -0400
+
+    Merge azure refresh fix from python-base
+
+commit 2dfb3035535e4be52ba549f1ff47acbe573b73f6
+Merge: 2b3fe30d fa12fea2
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Oct 8 17:55:50 2019 -0700
+
+    Merge pull request #975 from micw523/patch-1
+    
+    Update py.test to pytest
+
+commit fa12fea2e47892c41678bdbd31ffb8dfdd6dc3ff
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Tue Oct 8 14:42:55 2019 -0500
+
+    Change py.test to pytest
+
+commit 2b3fe30d24ed2b74a9ba9830dc37943951860c01
+Merge: c3102894 67bac5d2
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Sep 25 10:22:02 2019 -0700
+
+    Merge pull request #969 from goddenrich/support-false-and-missing-fields-config
+    
+    support false values and missing fields in configs
+
+commit 67bac5d22bc9750275007acc8e00ff384d849ced
+Author: Richard Godden <7768980+goddenrich@users.noreply.github.com>
+Date:   Wed Sep 25 10:49:12 2019 +0100
+
+    support false values and missing fields in configs
+
+commit c31028949e79167ad6a5134a5161af9446080a3e
+Merge: a05c3315 fd9de42b
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Sep 24 14:35:58 2019 -0700
+
+    Merge pull request #966 from micw523/testfix116
+    
+    Address API Changes Introduced in k8s v1.16
+
+commit fd9de42babef226ae8bf67f316593fc422645318
+Author: micw523 <micw@umich.edu>
+Date:   Tue Sep 24 16:30:10 2019 -0400
+
+    Fix deprecations introduced in v1.16
+
+commit a05c3315f00dfff9385f60bc4cad4d856b8e23e9
+Merge: f4634711 752373b1
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Sep 20 13:39:25 2019 -0700
+
+    Merge pull request #956 from oz123/get_exit_code
+    
+    Test getting the returncode of execution in a pod
+
+commit 752373b1f9c8f1d0e38d193ff8e0f1d4c652aafc
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Tue Sep 17 17:08:26 2019 +0200
+
+    Test getting the returncode of execution in a pod
+    
+    This tests demonstrate how to execute a command in a pod and
+    what behavior is expected. As discussed in the commit
+    bf367ed6ddc63369f76df0a07b248a6711328605 in python-base this
+    behavior would be familiar to Python users, as `subprocess.Popen`
+    has the same property.
+
+commit f4634711ec2decf273e915d42e43824b64a15b87
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Tue Sep 17 17:06:02 2019 -0700
+
+    Dummy change to trigger readthedocs build
+    
+    trigger the build in https://readthedocs.org/projects/kubernetes/builds/ through the webhook integration
+
+commit ceaf188498bd43577b1bec72cc4e839be2379632
+Merge: a5cb3d78 2958cf01
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Sep 13 17:14:40 2019 -0700
+
+    Merge pull request #938 from scottilee/examples
+    
+    #884: Cleanup examples folder
+
+commit 2958cf0195581cbdf4c1a142610666a2e1cabd33
+Author: Scott Lee <scottlee@fastmail.com>
+Date:   Fri Sep 13 16:16:54 2019 -0700
+
+    Address PR comments
+
+commit 04c499c3957d4dbe4dc92d260c466f9bc7559f09
+Author: Scott Lee <scottlee@fastmail.com>
+Date:   Tue Aug 20 18:48:29 2019 -0700
+
+    884: Cleanup examples folder
+
+commit a5cb3d788977bcecf43f9be4d4602e7b5bf1e56c
+Merge: 08fefc3a 8b385a87
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Aug 26 13:06:38 2019 -0700
+
+    Merge pull request #855 from juliantaylor/parse-quantity
+    
+    add function to parse canonical quantities (e.g. resources)
+
+commit 8b385a87dc83fc66bf16d4f36169d82a8df3dbbe
+Author: Julian Taylor <juliantaylor108@gmail.com>
+Date:   Mon Aug 26 21:48:35 2019 +0200
+
+    add function to parse canonical quantities (e.g. resources)
+    
+    This utility function is useful to parse values like the 200m or 300Gi
+    memory and cpu resources stored in kubernetes manifests.
+    It uses Decimal as output format as it usually represents typical input
+    values more accurately and reduces rounding errors.
+
+commit 08fefc3a6e7f40f6d5660d79aef853ae3d88b0c4
+Merge: 91c080d3 c6305280
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Aug 21 15:44:33 2019 -0700
+
+    Merge pull request #924 from oz123/update-support-matrix
+    
+    Update support matrix
+
+commit 91c080d3900089e837e0231960c8a0299dcf6430
+Merge: 2e3b50e0 60f0ba99
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Sat Aug 17 21:20:05 2019 -0700
+
+    Merge pull request #933 from ratanboddu/ingress-example
+    
+    Added Ingress Example
+
+commit 60f0ba99f0e08eb20f0a4f1cf9f577b0280e2e20
+Author: Ratan Boddu <ratanboddu@gmail.com>
+Date:   Sat Aug 17 02:58:22 2019 +0530
+
+    Suggested changes
+
+commit a796e1e3f3a4c351979cef4fd4309efb00fa86c5
+Author: Ratan Boddu <ratanboddu@gmail.com>
+Date:   Thu Aug 15 15:52:12 2019 +0530
+
+    Added Ingress Example
+
+commit 2e3b50e08e005861ee0e612366c3b3cc75fd831b
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Tue Aug 13 22:57:43 2019 +0200
+
+    Update examples (#922)
+    
+    * Consolidate both examples for create deployments
+    
+    * Update deployment_examples.py: use V1Deployment
+    
+    * Update sphinx documentation with deployment examples
+
+commit 40a03984d8feb90fb2486a460e3e821c42fc175c
+Merge: 9dbbc695 ab8b9034
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Aug 13 12:35:43 2019 -0700
+
+    Merge pull request #929 from micw523/patch-7
+    
+    Restore latest release of minikube
+
+commit 9dbbc6959ad3ecda8dda17f1d44135d64ccb0db1
+Author: Scott Lee <scottilee@users.noreply.github.com>
+Date:   Tue Aug 13 12:31:42 2019 -0700
+
+    Add issue templates (#916)
+    
+    * Add issue templates
+    
+    * Include feedback fixes
+    
+    * Fix wording
+
+commit ab8b903488f7bd64ba16454679ad479a2a5895d9
+Author: micw523 <micw@umich.edu>
+Date:   Tue Aug 13 14:08:49 2019 -0400
+
+    Restore latest release of minikube
+
+commit c630528065903153a90ed00826122b12c23e2ad3
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Fri Aug 9 07:37:21 2019 +0200
+
+    Remove old client versions (>v1.9) from support matrix
+    
+     * Add updating of support matrix to REALEASE.md
+       This will help future maintainers and prevent the table
+       from becoming huge again.
+
+commit b51037f02b72c59742f277db1d4bb528e9332cfb
+Merge: b403562b d300fd78
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Aug 8 16:49:25 2019 -0700
+
+    Merge pull request #918 from roycaihw/minikube-1.15.1
+    
+    Temporary pin minikube to 1.2.0 due to regression in 1.3.0
+
+commit d300fd78094d766ae99d4e863f9ccc9519036e0e
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Aug 6 15:02:49 2019 -0700
+
+    use minikube 1.2.0
+
+commit b403562b940ce356cb4875bac34cd448d7a055f7
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Tue Aug 6 18:48:15 2019 -0700
+
+    CHANGELOG for removing use of alpha initializers
+
+commit 1d51d5ab5751eca7cba1d26c2eeb7806e16e993c
+Merge: c1842a3e 959c8630
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Aug 5 11:17:51 2019 -0700
+
+    Merge pull request #915 from scottilee/owners
+    
+    Move inactive members to emeritus
+
+commit 959c8630515d0a0e0e27d79ad2cfd73a3b92c407
+Author: Scott Lee <scottlee@fastmail.com>
+Date:   Fri Aug 2 16:24:00 2019 -0700
+
+    Move inactive members to emeritus
+
+commit c1842a3e5339753c50728b4f0f914e4dfcf44d36
+Merge: b723cc0a 3b842166
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Aug 2 14:47:56 2019 -0700
+
+    Merge pull request #893 from oz123/docs_update
+    
+    Docs update
+
+commit b723cc0a96db9b9010c5a3a9814d2e84acbb057a
+Merge: 14a63f81 630b0ac1
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Aug 2 13:05:52 2019 -0700
+
+    Merge pull request #786 from haiker2011/master
+    
+    feat: add Job examples
+
+commit 14a63f81a7215f1948e46a5445b250822b2a5019
+Merge: 41971cc6 3f8d583e
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Aug 2 13:03:54 2019 -0700
+
+    Merge pull request #911 from goddenrich/parse-microseconds-submodule
+    
+    update submodule to include parsing microseconds
+
+commit 3f8d583ee08133880c6985d70fb773f458834abe
+Author: Richard Godden <7768980+goddenrich@users.noreply.github.com>
+Date:   Thu Aug 1 22:16:00 2019 +0100
+
+    update submodule to include parsing microseconds
+
+commit 3b842166529b86d58d398a9ba34ad30b01b01439
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Wed Jul 24 23:55:29 2019 +0200
+
+    Mulitple docs fixes
+    
+     *  Document how to build the doumentation with sphinx
+    
+        For convinience, I added a Makefile which spares one to memorize the
+        long sphinx command, or type python setup.py build_sphinx
+    
+        You simply use `make html` and you will get the docs.
+    
+     * Render README with markdown properly
+    
+       conf.py includes some code to work around a  bug in
+       common mark. The markdown is now properly converted to HTML.
+    
+     * Fix rendering of CONTRIBUTING.md
+
+commit 41971cc6ea008db83c3803a76937db85782abea5
+Merge: c98d7611 dd72deae
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jul 30 15:15:53 2019 -0700
+
+    Merge pull request #888 from micw523/update-nginx
+    
+    Deprecate extensions/v1beta1 deployment
+
+commit c98d7611275b0102db6cfd46fda609cd58a3c91c
+Merge: 6c0846c8 c558b127
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jul 30 15:07:51 2019 -0700
+
+    Merge pull request #907 from micw523/patch-5
+    
+    Add micw523 to reviewers
+
+commit c558b127bf8228c9b778d47c7cfb81ce2404a663
+Author: micw523 <micw@umich.edu>
+Date:   Tue Jul 30 17:56:27 2019 -0400
+
+    Add micw523 to reviewers
+
+commit 6c0846c85b7e12e4dcd0d0ba86fbe9719562295e
+Merge: 5a53aea3 eace0bd3
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jul 30 11:14:07 2019 -0700
+
+    Merge pull request #896 from cclauss/patch-1
+    
+    Travis CI: The sudo: tag is now fully deprecated in Travis
+
+commit 5a53aea3a700db204c3c9704db5d1ec6e8955a0d
+Merge: 734e2555 6709b753
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Jul 26 13:15:59 2019 -0700
+
+    Merge pull request #848 from tomplus/fix/example-crd
+    
+    add example of using custom resources
+
+commit 6709b753b4ad2e09aa472b6452bbad9f96e264e3
+Author: Tomasz Prus <tomasz.prus@gmail.com>
+Date:   Tue Jun 4 23:53:39 2019 +0200
+
+    add example of using custom resources
+
+commit 734e25558f8a041c2636be2293dc319391616002
+Merge: 659f463d f3e3170d
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Jul 26 10:00:01 2019 -0700
+
+    Merge pull request #897 from micw523/patch-3
+    
+    Update urllib3 for CVE-2019-11324
+
+commit f3e3170dd9fad56757a89dfb7f69054128f436d5
+Author: micw523 <micw@umich.edu>
+Date:   Thu Jul 25 20:06:52 2019 -0400
+
+    Update urllib3 for CVE-2019-11324
+
+commit 659f463dc4fb934f445ce9803ebdd47835685b4a
+Merge: 8845beee 671bf7dc
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Jul 25 11:46:45 2019 -0700
+
+    Merge pull request #894 from oz123/drop_py_3.4_from_setup
+    
+    Python 3.4 is no longer supported
+
+commit 8845beee0a166ca0928d13a851ef4c72fe8c9404
+Merge: 4a204fa4 c3f36bd5
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Jul 25 11:40:09 2019 -0700
+
+    Merge pull request #846 from hajowieland/master
+    
+    Enhancements for example3.py and example4.py
+
+commit eace0bd3fe6a36c55a3bfeb8cc24eddd7dd51d77
+Author: Christian Clauss <cclauss@me.com>
+Date:   Thu Jul 25 15:19:35 2019 +0200
+
+    Travis CI: The sudo: tag is now fully deprecated in Travis
+
+commit 671bf7dc68feb1fc59a3a301534af9a123b58c70
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Thu Jul 25 07:38:02 2019 +0200
+
+    Python 3.4 is no longer supported
+    
+     This update the setup metadata to indicate this
+
+commit dd72deaec237bfedebcf82bf3d24b102cddef18a
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Tue Jul 23 21:28:04 2019 -0400
+
+    Deprecate extensions/v1beta1 deployment
+
+commit 4a204fa4cd1ae6f8bfe2e1eea15145ba72532456
+Merge: 1ad4afff ce188d5f
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jul 23 16:50:14 2019 -0700
+
+    Merge pull request #732 from tomplus/feat/mvn
+    
+    feat: remove dependency on mvn from updating script
+
+commit 1ad4afff3595350dc8339ec0afa0b780b75264f7
+Merge: b8cb6e8d 7ac10700
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jul 23 12:48:14 2019 -0700
+
+    Merge pull request #824 from tnqn/verbose
+    
+    Fix AttributeError in create_from_yaml
+
+commit b8cb6e8de74f251ce37a525c7e9e036e435a217f
+Merge: 693f1158 e867c294
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jul 23 12:36:15 2019 -0700
+
+    Merge pull request #795 from oz123/util-improvements
+    
+    Allow creation from dict
+
+commit e867c294bbeac54616a8a7be2941196436e29d0e
+Merge: 6100392c 693f1158
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Tue Jul 23 07:38:20 2019 +0200
+
+    Merge branch 'master' into util-improvements
+
+commit 6100392c47512abc6078065a21c83cd61ac7ef23
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Wed Jun 26 00:23:21 2019 +0200
+
+    Add optional namespace to create_from_dict
+    
+    This follows up on the addition to create_from_yaml, the behavior is the
+    same.
+
+commit ab002f760d76e37ea6a808035555837923be9bb5
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Tue Jun 25 22:31:41 2019 +0200
+
+    Remove obsolete test
+    
+    The current PR no longer support creating from string
+
+commit 693f11586ddeb34876c1db1e84333202b06764bc
+Merge: b519de15 2eb2c8dc
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Jul 22 18:36:53 2019 -0700
+
+    Merge pull request #889 from micw523/docs
+    
+    Update docs python version for Travis CI
+
+commit 2eb2c8dc81fe92a186ca6fdf398ef1f98e694895
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Mon Jul 22 21:14:40 2019 -0400
+
+    update docs python version
+
+commit b519de15c27037ce71d432ec068ad10cc2e0a7a8
+Merge: 02358ec6 3543417f
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Jul 18 10:16:11 2019 -0700
+
+    Merge pull request #873 from TomasTomecek/fix-die
+    
+    kube-init.sh: die is not a command
+
+commit 3543417fb0d7d661e3ced46549302e3bf1c8182f
+Author: Tomas Tomecek <ttomecek@redhat.com>
+Date:   Fri Jul 12 15:27:58 2019 +0200
+
+    kube-init.sh: die is not a command
+    
+    Signed-off-by: Tomas Tomecek <ttomecek@redhat.com>
+
+commit 02358ec60ff847e860eb58f037bde43cc7adcf90
+Merge: da8c843b 2af7c631
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jul 16 20:02:34 2019 -0700
+
+    Merge pull request #883 from scottilee/incubator
+    
+    #877: Remove reference to incubator
+
+commit 2af7c631bd5ba67070537dbbe120d7e98eed17dc
+Author: Scott Lee <scottlee@fastmail.com>
+Date:   Tue Jul 16 17:48:13 2019 -0700
+
+    #877: Remove reference to incubator
+
+commit da8c843bda7ebf03f53cdc95409e5543d2b2abd3
+Merge: c4883541 e8fd4b9a
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Jul 8 17:28:00 2019 -0700
+
+    Merge pull request #807 from oz123/drop-python-34
+    
+    Drop Python3.4
+
+commit 2d1d8e6d9dbb186c088da56482825393a70f713e
+Author: Yacov Malen <49476663+ymalen@users.noreply.github.com>
+Date:   Thu Jul 4 11:12:54 2019 +0300
+
+    Update README.md
+    
+    Update the documentation to note an issue with using stream and the api client.
+
+commit c4883541465fe6a276365bb3e3dfee34c4e0c296
+Merge: c4c18d93 38e35af5
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Jul 1 17:27:08 2019 -0700
+
+    Merge pull request #861 from roycaihw/release-10.0.0
+    
+    Prepare master branch for 10.0.0 release
+
+commit 38e35af5ccb9d7a5ef829b32b4a85fa35dca816c
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Jul 1 15:27:24 2019 -0700
+
+    add changelog for python repo changes; update readme
+
+commit 8622ac4be460a0fd85a550605bce137080d0e4ed
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Jul 1 15:20:01 2019 -0700
+
+    generated client update for 10.0.0-snapshot
+
+commit 13394b0cc7790de607011ee67b84cad72b612abd
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Jul 1 14:55:31 2019 -0700
+
+    add changelog for python-base update
+
+commit 14f97fcdcee18ef4a045590021129e97c1785527
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Jul 1 14:49:26 2019 -0700
+
+    update python-base submodule
+
+commit c4c18d930cb762fa961671cdfb659a3c970731c0
+Merge: c86e4898 d7300db6
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jun 25 12:33:59 2019 -0700
+
+    Merge pull request #856 from oz123/test-suite-change-k8s-version
+    
+    Don't use latest stable version for minikube
+
+commit d7300db66d52c90ada1b603b6de61eba199ddc0a
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Fri Jun 21 15:10:27 2019 +0200
+
+    Don't use latest stable version for minikube
+    
+    Sometimes, minikube lags behind kubernetes which can lead
+    to a breakage of the test suite, since minikube will fail to start
+    with the latest kubernetes version.
+    See for example [this issue](https://github.com/kubernetes/minikube/issues/4371).
+    
+    This change defaults to leave the decision of which k8s version to use,
+    to minikube itself. This is defined in:
+    
+    https://github.com/kubernetes/minikube/master/pkg/minikube/constants/constants.go
+    
+    However, if one really desires it is still possible to pass
+    
+    `--kubernetes-version=X.Y.Z`
+    
+    to minikube initialization start command via an environment variable
+    before invoking the test suite:
+    
+    export $MINIKUBE_ARGS="--kubernetes-version=X.Y.Z"
+    
+    This allows ofcourse passing other flags to minikube also.
+
+commit 9e40421bcc685d8d65b900dfeba0fec26c3cfea8
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Thu Jun 20 22:48:35 2019 +0200
+
+    create_from_yaml function deals with files only
+    
+    Adding the ability to deal with strings containing yaml seems to repel
+    to much. So we stay with create_from_yaml with a bad name.
+    
+    This removes the need fro StringIO to wrap strings.
+    Also note:
+    
+    ```
+    with open('foo.txt') as f:
+        y = yaml.safe_load_all(f)
+    
+    for i in y:
+        print(i)
+    
+    \# raises ValueError: I/O operation on closed file.
+    ```
+    
+    Hence, we indent the whole method body into the open block.
+    
+    with open('foo.txt') as f:
+        y = yaml.safe_load_all(f)
+        for i in y:
+            print(i)
+
+commit ed67d89f9b19545c7e88809ab6ced25af63514d4
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Thu Jun 20 19:53:28 2019 +0200
+
+    Remove un-necessary if block
+
+commit 5c912f986f7066a87c45315f196c4eed239061d3
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Thu Jun 20 18:37:58 2019 +0200
+
+    Throw exception from create_from_dict
+    
+    This is instead of doing this in create_from_yaml
+
+commit 4fa0e87bd71785cce49623d51fcbb81805e3fe4c
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Thu Jun 20 14:30:27 2019 +0200
+
+    Correct the documentation for create_from_dict
+    
+    The function can create one or more Kuberenetes objects
+    based on the content of data. It can handle all API objects
+    incuding `List` type, which by itself can contain more than
+    one Kuberenetes API objects.
+
+commit 34898387c3630a6b3f4a9a3bccddd0c1d07254a5
+Merge: f6566ee5 c86e4898
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Thu Jun 20 13:54:09 2019 +0200
+
+    Merge remote-tracking branch 'upstream/master' into util-improvements
+
+commit f6566ee5e6ca5d743fd81f8d216079385a3dbca4
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Thu Jun 20 13:27:33 2019 +0200
+
+    Rename yml_document paramter and update documentation
+    
+     Renaming `yml_document` in `create_from_dict` to data. This is a bit
+     clearer that this it a data item and not a string (usually document
+     read from the file system).
+     Also update the documentation to describe better what the functions
+     `create_from_dict` and `create_from_yaml` do.
+
+commit c86e4898fbdcac36722ecf64d7c026d770168d6a
+Merge: 05c1a432 80339ef3
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jun 18 13:23:51 2019 -0700
+
+    Merge pull request #782 from johscheuer/create-from-yaml-namespaced
+    
+    Add method to dynamically set namespace in yaml files
+
+commit 05c1a432d9069a339828d29d1fa276a911437c04
+Merge: 5e512ff5 a579f158
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Jun 18 09:46:23 2019 -0700
+
+    Merge pull request #816 from Ark-kun/patch-1
+    
+    Fix broken dependencies.
+
+commit c3f36bd54a554153aac1c6cea73f8c955d36cdfc
+Author: hajowieland <wielandhj@gmail.com>
+Date:   Sat Jun 1 14:05:01 2019 +0200
+
+    Configuration class to show active host
+
+commit 4e535772a40be6a2c07977c030f62686cf5895fa
+Author: hajowieland <mail@wieland.tech>
+Date:   Sat Jun 1 13:44:12 2019 +0200
+
+    Correct alignment
+
+commit 7ac1070077984b428ce47050b1aabf8b43bfdf3a
+Author: Quan Tian <qtian@vmware.com>
+Date:   Fri May 3 10:26:37 2019 -0700
+
+    Fix AttributeError in create_from_yaml
+    
+    Some models don't have attribute 'status', like V1ConfigMap,
+    V1ClusterRole, and V1NetworkPolicy. AttributeError would be raised if
+    these resources are created via create_from_yaml with verbose enabled.
+    
+    This patch checks if attribute 'status' exists before accessing it.
+
+commit 5e512ff564c244c50cab780d821542ed56aa965a
+Merge: 7fb3a251 89de1fa3
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Sat Apr 27 09:04:21 2019 -0700
+
+    Merge pull request #820 from scottilee/docs
+    
+    Correct inconsistent spacing and typos
+
+commit 89de1fa321ef2cd77ce386f3c00f3370951dd078
+Author: Scott Lee <scottlee@fastmail.com>
+Date:   Fri Apr 26 21:30:35 2019 -0700
+
+    Correct inconsistent spacing and typos
+
+commit a579f158685e5d29216ac9bed3b6a82dc9ca41cd
+Author: Alexey Volkov <alexey.volkov@ark-kun.com>
+Date:   Mon Apr 22 18:09:08 2019 -0700
+
+    Fix broken dependencies.
+    
+    All our libraries that depended on `kubernetes` started breaking today.
+    The reason is that pip does not do a good job properly resolving the compatible package versions.
+    It just install packages in order without caring about the incompatibilities.
+    The urllib3 package installed is incompatible with the `requests` package that's getting installed later.
+    
+    Changing the order fixes the issue.
+
+commit 139848efcb7a78e8577ac6c9a5b49abe97340e21
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Tue Apr 9 23:24:16 2019 +0200
+
+    Relax pycodestyle: import only allowed at the top
+    
+    While this is a really good convention, sometimes one must import
+    stuff inside a try except block. This block is still at the top, but pycodestyle
+    treats like it isn't, because it's in an idented block, and the outeer scope.
+
+commit 38894cc3970cf5578abd8a94a384a7602a965438
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Tue Apr 9 23:03:02 2019 +0200
+
+    Fix import for StringIO
+    
+    This is embarrassing.
+
+commit 408d405704d8826dd164d828670fa37bf6ca8027
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Tue Apr 9 22:51:54 2019 +0200
+
+    Handle StringIO for Python2 properly
+
+commit 7fb3a25176395da26007aec7b4c843aa03514c21
+Merge: 6d4587e1 914b6aac
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Apr 9 10:00:45 2019 -0700
+
+    Merge pull request #809 from axelsteingrimsson/add_email_scope_to_gcp_credentials_refresh_submodule
+    
+    Updating Submodule for GCP Email Scope Addition
+
+commit 914b6aacf6f349e699f1b93c4c121cfd74b87d04
+Author: axelsteingrimsson <axel.steingrimsson@shopify.com>
+Date:   Tue Apr 9 10:20:59 2019 +0200
+
+    Updating Submodule for GCP Email Scope Addition
+
+commit 8d41478ed87145af480ccd0cc5863d3ed8ce2ca8
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Mon Apr 8 13:54:26 2019 +0200
+
+    Explicitly use other deployment names for test
+    
+    Using `nginx-app` deployment multiple times, is problematic because we get
+    conflicts or not found error.
+    
+    Instead of trying to handle all cases, explicit different names
+    are used now. The tests now runs more reliably
+
+commit 2b83c683f8523a527b1815f0896d47c599aa9b09
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Mon Apr 8 12:35:41 2019 +0200
+
+    Fix for a flaky test failing because k8s is slow
+    
+    We create a deployment and do the following:
+    
+    ```
+    self.assertIsNotNone(dep)
+    ```
+    
+    Which does not fail, and then the code proceeds to deletion
+    and fails with a 404 execption in 80% of the time, but sometimes
+    it works. The deployment is there, but for some reason not available for
+    deletion.
+    Travis CI also showed inconsitent behaviour on this. Python3.5 passed
+    but all other version failed.
+    With this commit we wait for the deployment to become available for
+    deletion and only then continue.
+
+commit 80339ef3f74fa256869b49f8ea0789fc3b86b51f
+Author: Johannes M. Scheuermann <joh.scheuer@gmail.com>
+Date:   Mon Apr 8 07:52:01 2019 +0200
+
+    Add more documentation to new namespace parameter
+
+commit e8fd4b9af9e788fca59119b19d64f46c7b05c34f
+Author: Oz N Tiram <oz.tiram@gmail.com>
+Date:   Fri Apr 5 20:57:53 2019 +0200
+
+    Drop Python3.4
+    
+     Python3.4 become EOL on 2019.03.18.
+    
+     https://www.python.org/dev/peps/pep-0429/
+
+commit 0779fc9c66016d3544aab5e35457f86b25fcd961
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Fri Apr 5 08:20:57 2019 +0200
+
+    Fix collection of execptions when applying yaml
+    
+     This fixes of all tests and keeps the original API.
+    
+     It's the users responsiblility to do something the execptions
+     when using `create_from_dict`, no air bag or breaks are supplied here.
+
+commit 18f45c9ceca522d1202cb2b5b7c98f32321fe516
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Fri Apr 5 06:30:43 2019 +0200
+
+    Fix wrong import name
+
+commit 50ef8746a995eb4458591ae1fa268217e5e2e237
+Merge: cee4e49e 6d4587e1
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Fri Apr 5 00:23:34 2019 +0200
+
+    Merge branch 'master' into util-improvements
+
+commit 6d4587e18064288d031ed9bbf5ab5b8245460b3c
+Merge: 1115bca6 292b04b2
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Apr 3 18:42:48 2019 -0700
+
+    Merge pull request #804 from roycaihw/10.0.0-snapshot
+    
+    Update python-base submodule and re-generated client to 10.0.0-snapshot
+
+commit 292b04b298ab757878614bee8d28017d59997696
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Apr 3 14:14:09 2019 -0700
+
+    update changelog and readme in preparation for 10.0.0a1
+
+commit b603b4a9c4a9f6686f2263ae9e2959aa72d89568
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Apr 3 13:53:46 2019 -0700
+
+    generated client change for 10.0.0-snapshot
+
+commit f55d98134672077a423b9a58b17d261f1aa7d69c
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Apr 3 12:59:41 2019 -0700
+
+    update version constant for 10.0.0-snapshot
+
+commit 35c06bb509c58d41470a027fcf970e159e18c0a3
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Apr 3 12:58:51 2019 -0700
+
+    update changelog for changes from python-base submodule
+
+commit 52ba6399c4d15d2ab945f29db775f8a534d8fd89
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Apr 3 10:25:21 2019 -0700
+
+    update python-base submodule
+
+commit 1115bca657ccd280d3eaffab6cac00bbbabdf5a5
+Merge: 6a4935e2 9b989ddc
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Apr 1 16:46:35 2019 -0700
+
+    Merge pull request #767 from micw523/yaml-rbac
+    
+    Add Rbac support for creating from YAML
+
+commit 6a4935e2ed120a0d11099f92b752763b5da3d4c4
+Merge: 0af22b15 0bdb6518
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Apr 1 13:06:34 2019 -0700
+
+    Merge pull request #797 from micw523/patch-2
+    
+    Long term solution for using minikube in CI
+
+commit cee4e49edad0f7c3a8081331c5f6a0e6afee731b
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Tue Mar 26 23:30:25 2019 +0100
+
+    Rename create_from_map to create_from_dict, add tests
+
+commit aa28bc706727f0cb855f02e1112cf5a4b50b32af
+Author: Oz Tiram <oz.tiram@gmail.com>
+Date:   Tue Mar 26 19:11:57 2019 +0100
+
+    Allow create from string or from dict
+    
+    This is a fix for #722
+
+commit 15d36c968888b60d6f778062950974e5a00d8690
+Author: Johannes M. Scheuermann <joh.scheuer@gmail.com>
+Date:   Tue Mar 26 21:45:14 2019 +0100
+
+    Use optional parameter for method
+
+commit 0bdb65185d3b4093df4311ec29d306bb8c7b20da
+Author: micw523 <micw@umich.edu>
+Date:   Tue Mar 26 14:52:16 2019 -0500
+
+    Update minikube version to "latest"
+
+commit 06776ced35b7d2fe031006bfeaeb8fc3940e0737
+Author: Johannes M. Scheuermann <joh.scheuer@gmail.com>
+Date:   Mon Mar 25 16:17:12 2019 +0100
+
+    Rebase code and add namespaced method
+
+commit 9b989ddc2d6b308868bd7de06386eddbe29c3530
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Wed Mar 20 17:54:33 2019 -0500
+
+    Add rbac support for yaml
+
+commit 0af22b15561c1b2f5112ee3adff761e8d12da41f
+Merge: 84c057bf d5b163bd
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Mar 20 10:33:43 2019 -0700
+
+    Merge pull request #789 from roycaihw/update-readme
+    
+    update changelog and readme in master branch
+
+commit d5b163bd973cae885bd92f460b26027f3c3dd603
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Mar 18 18:35:38 2019 -0700
+
+    update changelog and readme
+
+commit 84c057bfacf3fa881d0a56fdba04b7e7f5eeffd8
+Merge: 374233d0 c0f71c3b
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Mar 19 13:22:24 2019 -0700
+
+    Merge pull request #673 from micw523/yaml-list
+    
+    Extend YAML load functionality to *LIST and multi-resources
+
+commit 630b0ac15d46c781e4b0c30c7c5f0cf39bd99733
+Author: haiker2011 <haizhou.uestc2011@gmail.com>
+Date:   Tue Mar 19 16:03:37 2019 +0800
+
+    fix code style
+
+commit 9d12fe40f221cf89878201b8e6493415258e8a90
+Author: haiker2011 <haizhou.uestc2011@gmail.com>
+Date:   Tue Mar 19 15:44:35 2019 +0800
+
+    Add Job examples
+
+commit c0f71c3ba6601c0126aecb24443fc833d0428dd8
+Author: micw523 <micw@umich.edu>
+Date:   Tue Mar 19 00:36:32 2019 -0500
+
+    Add list / multi resource support
+
+commit 374233d05c78c4f89bd85b3e3f2e3ccc0cb165f8
+Merge: fcda6fe9 8c9494ec
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Mar 15 15:26:57 2019 -0700
+
+    Merge pull request #779 from chowmean/proxy-header-option
+    
+    Adding proxy headers options for configurations.
+
+commit 8c9494ecf9efa65ae3f44df8930eb47bb3301233
+Author: chowmean <gaurav.dev.iiitm@gmail.com>
+Date:   Sat Mar 16 00:20:12 2019 +0530
+
+    adding proxy headers settings for proxy_manager
+
+commit fcda6fe96beb21cd05522c17f7f08c5a7c0e3dc3
+Merge: 2c02595f 22db50ec
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Feb 20 13:45:37 2019 -0800
+
+    Merge pull request #766 from Sai-Adarsh/master
+    
+    Fixes Setup.py error on Windows #676
+
+commit 22db50ec7efdd30efbf2ed741b7f5b5284d347e0
+Author: sai-adarsh <sivakumar.sk11865.sk@gmail.com>
+Date:   Thu Feb 21 01:12:15 2019 +0530
+
+    Initial Commit
+    
+    Initial Commit
+
+commit 2c02595fa485114d23139a2cdc840998555d0d6d
+Merge: 67d30a03 3d125557
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Thu Feb 7 14:29:52 2019 -0800
+
+    Merge pull request #668 from iamneha/adal
+    
+    Fix: Make dependancy adal optional
+
+commit 3d125557c5ae03d6d380d2c295ca79049995f64b
+Author: Neha Yadav <inehayadav28@gmail.com>
+Date:   Fri Feb 8 03:23:29 2019 +0530
+
+    Make dependancy adal optional
+
+commit 67d30a03fbc1f63051102d4dbf4f5d333127ab0e
+Merge: 7486e196 e35611ca
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Feb 7 11:11:29 2019 -0800
+
+    Merge pull request #748 from roycaihw/base-update
+    
+    Update base module and regenerate client for 9.0.0b1
+
+commit e35611ca626dc315dd2d5674c99f24ee274bf585
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Feb 6 17:20:12 2019 -0800
+
+    remove patch backup
+
+commit 7486e196b68d83317f18f6ef9a4cc35f842d7bda
+Merge: ed18ea8d bbe14e8a
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Feb 6 15:53:38 2019 -0800
+
+    Merge pull request #746 from rlenferink/patch-owners
+    
+    Updated OWNERS file to include link to docs
+
+commit 0ebe1663c08ecebe2281cbb06eb7f8f7fe301252
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Feb 6 15:21:18 2019 -0800
+
+    Update changelog
+
+commit 1496a21b5ef3a0a7696c815d7ac6f6de28fc7113
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Feb 6 15:20:25 2019 -0800
+
+    generated client change for 9.0.0b1 release
+
+commit af3f77fed939a4f9412e67b067901d7e6636ae05
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Feb 6 14:56:00 2019 -0800
+
+    update python-base submodule
+
+commit bbe14e8a571a1a929218ddbcec5a05e5a9d05470
+Author: Roy Lenferink <lenferinkroy@gmail.com>
+Date:   Mon Feb 4 19:03:05 2019 +0100
+
+    Updated OWNERS file to include link to docs
+
+commit ce188d5f0e0bb5d8aba83eb52c732954b14d0351
+Author: Tomasz Prus <tomasz.prus@gmail.com>
+Date:   Mon Jan 21 01:17:05 2019 +0100
+
+    feat: remove dependency on mvn from updating script
+
+commit ed18ea8d70846e273bdbeaf4d33676538d6aeabb
+Merge: 430544b6 fb73617f
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Jan 14 11:58:46 2019 -0800
+
+    Merge pull request #724 from xvello/xvello/safe-yaml
+    
+    Update python-base ref to include yaml security fix
+
+commit 430544b6151e2b01491d1da3e13418b637e4f8c9
+Merge: 30c3522f 3240b45c
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Jan 9 09:36:49 2019 -0800
+
+    Merge pull request #719 from ramnes/use-safe-load
+    
+    Use yaml.safe_load
+
+commit fb73617f615966df6588c636730cc49db56b5258
+Author: Xavier Vello <xavier.vello@datadoghq.com>
+Date:   Wed Jan 9 11:27:33 2019 +0100
+
+    Update python-base ref to include yaml security fix
+
+commit 3240b45c46b1115890b011032c3c38e538d55d3c
+Author: ramnes <contact@ramnes.eu>
+Date:   Tue Jan 8 23:06:58 2019 +0100
+
+    Use yaml.safe_load
+    
+    See #718 for rationale.
+
+commit 30c3522f3bd1c7d2ae5386e02133706cf64d8a6e
+Merge: 37d831a9 e7e077c9
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Dec 27 09:50:38 2018 -0800
+
+    Merge pull request #698 from roycaihw/release-9.0.0a1-preparation
+    
+    Update master branch to 9.0.0-snapshot client
+
+commit e7e077c965633fdfac12dc64838b02e7209b391a
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Dec 26 23:31:17 2018 -0800
+
+    Mention security fix in 9.0.0a1, 8.0.1 and 7.0.1 releases
+
+commit b9d2679f4eecf8d1ebf4f48e811f07f19e283b65
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Dec 18 05:01:47 2018 -0800
+
+    Duplicate the DELETE param changelog in Breaking Change
+
+commit 37d831a95ed7babb94a0a150059ca93494df8b50
+Merge: 35e64065 4763374e
+Author: Kubernetes Prow Robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Sun Dec 16 18:14:42 2018 -0800
+
+    Merge pull request #707 from mbohlool/security-fix
+    
+    Potential security fix CVE-2018-20060
+
+commit 4763374eef1d778771de9c84219c9a04c121a712
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Dec 17 10:19:33 2018 +1100
+
+    Potential security fix CVE-2018-20060
+
+commit 2af8df8f44bfa47c322df6b635444656f551ff3e
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Dec 7 18:18:24 2018 -0800
+
+    Add 6.1.0 and 8.0.1 changelog
+
+commit f65d60fb4bd553ed2e3a551ad3a92cfa10459b10
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Dec 7 17:42:23 2018 -0800
+
+    Update README and CHANGELOG for 9.0.0a1-preparation
+
+commit cd411d27071797c0bad90b158a3ba335ee6f3b56
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Dec 7 16:43:15 2018 -0800
+
+    generated client change for 9.0.0-snapshot version constant update
+
+commit 84b1198d780b1b539802f8f8bfa092888aa7c03c
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Dec 7 16:37:26 2018 -0800
+
+    Update version constants for k8s 1.13 release snapshot
+
+commit 524b0f7b116c92a6dd62970f81a07901336b06cc
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Dec 7 16:27:17 2018 -0800
+
+    Update python-base submodule
+
+commit 35e6406536c96d4769ff7e2a02bf0fdcb902a509
+Merge: dca998c3 de9b1870
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Nov 12 17:07:41 2018 -0800
+
+    Merge pull request #685 from micw523/update-tox
+    
+    Support Python 3.7 for Travis CI
+
+commit dca998c3cb0786ee7c927aed074503c154392036
+Merge: 4d4ce212 6431af26
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Nov 12 10:52:41 2018 -0800
+
+    Merge pull request #687 from huangqg/fix_typos
+    
+    Fix typos: infomration -> information
+
+commit 6431af26f6a4baf9083246039b67b793ce298d05
+Author: maxwell <csuhp007@gmail.com>
+Date:   Mon Nov 12 23:37:55 2018 +0800
+
+    squash commits
+    
+    Signed-off-by: maxwell <csuhp007@gmail.com>
+
+commit de9b1870540f1bdba523ce3c0cdf3bf6be84672e
+Author: micw523 <micw@umich.edu>
+Date:   Fri Nov 9 19:58:26 2018 -0600
+
+    Prepare for Python 3.7 tests
+
+commit 4d4ce21265f58f79c55f6755e3ba60f4360ba172
+Merge: 4c4b0195 72568703
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Nov 2 14:56:14 2018 -0700
+
+    Merge pull request #677 from micw523/track-utils
+    
+    Track utils with pycodestyle
+
+commit 725687038f3b567c26c304b004f6bf2b26179539
+Author: Xianglong Wang <micw@umich.edu>
+Date:   Fri Nov 2 16:00:47 2018 -0500
+
+    Add codestyle tracking, fix codestyle
+
+commit 4c4b0195fbf639c0c330c0b7187b7840fb546aeb
+Merge: 2dafb4ba 105c5f07
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Nov 1 16:40:29 2018 -0700
+
+    Merge pull request #674 from roycaihw/8.0.0-base-readme
+    
+    Update python-base submodule, README and CHANGELOG for 8.0.0 release
+
+commit 105c5f07b009fbb4d12303d332f5c9feaa927063
+Author: Haowei Cai <haoweic@google.com>
+Date:   Thu Nov 1 16:11:43 2018 -0700
+
+    Update CHANGELOG and README on new feature and supported versions
+
+commit c09023843cafdafa87066cc0b7316b99c54070d9
+Author: Haowei Cai <haoweic@google.com>
+Date:   Thu Nov 1 16:06:11 2018 -0700
+
+    Update python-base submodule, pick up change:
+    
+    use pycodestyle as pep8 has been deprecated (rename)
+
+commit 2dafb4bad387db71ea2e50cc032451ce7ec6acbc
+Merge: 1efbab92 5a92ba65
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Oct 31 17:47:30 2018 -0700
+
+    Merge pull request #655 from micw523/master
+    
+    Add kubectl create -f like feature
+
+commit 5a92ba65aa69318afde2bb0b87e828fa1a976b2a
+Author: micw523 <micw@umich.edu>
+Date:   Wed Oct 31 19:34:18 2018 -0500
+
+    Add kubectl create -f feature
+
+commit 1efbab92c1a93756f8035101e106606c0cd63171
+Merge: bfb89c61 67ae262a
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Wed Oct 31 16:48:15 2018 -0700
+
+    Merge pull request #446 from charly37/master
+    
+    Add example for remote cluster without kube client on server
+
+commit bfb89c613dd749568a37acb7665e463030153209
+Merge: 529c0d3c e6390530
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Tue Oct 30 19:02:26 2018 -0700
+
+    Merge pull request #665 from micw523/k8s-version-upgrade
+    
+    Update Travis CI to use most current k8s server version
+
+commit e63905302fd4da45471253876df2c4fb45781fbf
+Author: micw523 <micw@umich.edu>
+Date:   Tue Oct 30 20:40:26 2018 -0500
+
+    Upgrade Travis CI k8s version
+
+commit 67ae262a512ff9b738312ec205a6ab291fb15fc5
+Author: Charles Walker <charles.walker.37@gmail.com>
+Date:   Sat Oct 27 09:04:42 2018 -0400
+
+    fix typo in comment
+
+commit 529c0d3c2fbceca0f38d1cd3ae2eb3d5cd660a07
+Merge: 3fb2be14 6ea777e6
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Oct 29 14:07:50 2018 -0700
+
+    Merge pull request #667 from micw523/k8s_pep8
+    
+    change pep8 into pycodestyle since pep8 is depreciated
+
+commit 6ea777e647e0d839cf38dbddc1fcc85c1cd985c6
+Author: micw523 <micw@umich.edu>
+Date:   Sat Oct 27 02:29:59 2018 -0500
+
+    change pep8 into pycodestyle since pep8 is depreciated
+
+commit 3fb2be14e18d84edef094bbd908b6bb3e39aafe6
+Merge: 712b4d15 ed5fc24e
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Oct 15 15:42:07 2018 -0700
+
+    Merge pull request #649 from roycaihw/8.0.0b1-generated-snapshot
+    
+    Generate snapshot client in preparation for 8.0.0b1 release
+
+commit ed5fc24e87dc6c7be7b5850878bd4ba8a72536e7
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Oct 15 15:15:40 2018 -0700
+
+    Update CHANGELOG for 8.0.0b1 release API changes
+    
+    against kubernetes 1.12.1 release (temp 1.12.2 openapi spec)
+
+commit 9484a106f2569383fc5048fdd12bc9196dfb3292
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Oct 15 14:58:13 2018 -0700
+
+    generated snapshot client for 8.0.0b1 release
+    
+    against kubernetes 1.12.1 release (temp 1.12.2 openapi spec)
+
+commit 712b4d15b1f818752844312484be7a4febe2e499
+Merge: 08561d64 9dbeaf03
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Oct 15 14:08:08 2018 -0700
+
+    Merge pull request #648 from roycaihw/update-base
+    
+    Update python-base submodule
+
+commit 9dbeaf0312e842a86c88fcb479bba6c37ce425b5
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Oct 15 13:53:14 2018 -0700
+
+    Update CHANGELOG for python-base changes
+
+commit 8b36900ba94c7265cd809cddbb723e7c5aee6254
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Oct 15 13:45:14 2018 -0700
+
+    Update python-base submodule
+    
+    to pick up changes:
+    - Replace encodestring and decodestring for standard_b64encode and standard_b64decode
+    - Update ExecProvider to use safe_get(); Update unit tests to use ConfigNode() instead of dict()
+
+commit 08561d6477e9be1b39d67ea51dc024a4899fcc07
+Merge: 5b2e27c8 57167a8b
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Sat Oct 13 12:03:25 2018 -0700
+
+    Merge pull request #647 from roycaihw/readme-slack
+    
+    Add link to kubernetes-client slack channel to README
+
+commit 57167a8bbeacd65f2603fe8340f71306825360dc
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Oct 12 15:40:30 2018 -0700
+
+    Add link to kubernetes-client slack channel to README
+
+commit 5b2e27c81b9d14acb71966461e883d5964e9776b
+Merge: 3a6fe823 e91700fe
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Oct 1 14:29:42 2018 -0700
+
+    Merge pull request #631 from roycaihw/generate-8.0.0-snapshot
+    
+    Generate 8.0.0 snapshot client on master branch
+
+commit e91700fe7c029e8eb8cc6354002885727f96442f
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Sep 28 16:14:19 2018 -0700
+
+    Update changelog and readme for 8.0.0-snapshot client
+    
+    generated from kubernetes 1.12.0
+
+commit 316509b32a4f127193a6474a638110e68ce851e3
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Sep 28 14:16:18 2018 -0700
+
+    generated client change for 8.0.0 snapshot on master branch
+    
+    against kubernetes release-1.12 branch
+
+commit d9533dcb236ddc384beffc549c96a0f3f3199c90
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Sep 28 14:10:04 2018 -0700
+
+    Update version constants for 8.0.0-snapshot on master
+    
+    against kubernetes 1.12.0 release
+
+commit 3a6fe8231cefe1fa39a0a69d4b2f33044ab32745
+Merge: 3459c173 c63c069c
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Sep 28 13:21:15 2018 -0700
+
+    Merge pull request #630 from roycaihw/base-8.0.0a1
+    
+    Update python-base submodule
+
+commit c63c069ca81f465b0eae40a514b0cc2cee83f8a5
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Sep 28 12:58:32 2018 -0700
+
+    Update python-base submodule
+    
+    in preparation for 8.0.0a1 release.
+    Changes picked:
+      - fix: read config data with bytes (python3)
+
+commit 3459c173cddc9252f7eb803da9e86aaae08ee653
+Merge: 6e0d543d bc805e37
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Sep 28 12:49:05 2018 -0700
+
+    Merge pull request #587 from onkarganjewar/patch-1
+    
+    Fix typo in exec.py example
+
+commit 6e0d543d02cc23c424c8af4aa9ce32fb740aa54c
+Merge: d5bd0d3a 0ff38b84
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Sep 28 12:41:44 2018 -0700
+
+    Merge pull request #615 from zachvalenta/patch-1
+    
+    fix typo
+
+commit d5bd0d3a5320d84d4a49a44ccdeaba53d3597775
+Merge: 1edf4995 1de41f1c
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Mon Sep 10 10:43:35 2018 -0700
+
+    Merge pull request #619 from willthames/update_python_base
+    
+    Update python-base to latest for exec-based clients
+
+commit 1de41f1c8b9c9e912679ad34140ce0f063d15ff0
+Author: Will Thames <will@thames.id.au>
+Date:   Sat Sep 8 13:07:11 2018 +1000
+
+    Update python-base to latest for exec-based clients
+    
+    Include https://github.com/kubernetes-client/python-base/pull/75
+
+commit 1edf499546935ae8d2795e1a334704cf372e989a
+Merge: cf33f416 f9d5c936
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Thu Aug 30 10:33:49 2018 -0700
+
+    Merge pull request #610 from tomplus/feat/in-cluster-example
+    
+    feat: improve in-cluster-config example
+
+commit 0ff38b847d1d56de9d87c5bc45c8cf1e50c0cc34
+Author: z_jay_v <zjv5002@gmail.com>
+Date:   Thu Aug 30 13:00:41 2018 -0400
+
+    fix typo
+
+commit f9d5c936a3d4f94efcff2405a8d2931b845fa745
+Author: Tomasz Prus <tomasz.prus@gmail.com>
+Date:   Tue Aug 28 00:07:39 2018 +0200
+
+    feat: add doc to in-cluster-config example
+
+commit cf33f416ac90b3e578a2e9c655b8a23441bfc540
+Merge: 5b86298c b01fad55
+Author: k8s-ci-robot <k8s-ci-robot@users.noreply.github.com>
+Date:   Fri Aug 24 10:23:48 2018 -0700
+
+    Merge pull request #608 from spiffxp/update-design-docs-link
+    
+    Remove link to kubernetes-client/community
+
+commit b01fad55b2515e4d0418eb47d778d77b4e223153
+Author: Aaron Crickenberger <spiffxp@google.com>
+Date:   Thu Aug 23 10:45:28 2018 -0700
+
+    Remove link to kubernetes-client/community
+    
+    Point directly to the file that the kubernetes/community link was
+    pointing to
+
+commit 5b86298c9c9bb7e70fb62dc920cd4792dbaf7727
+Merge: fbcbfc62 cbe277bd
+Author: Yu Liao <yliao@google.com>
+Date:   Wed Aug 15 15:13:59 2018 -0700
+
+    Merge pull request #598 from roycaihw/revert-changelog
+    
+    Revert CHANGELOG to exclude api change from GA release
+
+commit cbe277bdb0e83d46baa9cad30314176c5bbdd233
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Aug 14 14:51:04 2018 -0700
+
+    Revert CHANGELOG to exclude api change from GA release
+
+commit fbcbfc621d153ff0c9fc70cc840fcc92ae2f76e8
+Merge: b68c3bd6 2acef641
+Author: Yu Liao <yliao@google.com>
+Date:   Tue Aug 14 10:10:36 2018 -0700
+
+    Merge pull request #594 from roycaihw/pick-up-custom-object-api-change
+    
+    Update generated client to pick up custom object API change
+
+commit 2acef641de1fca1eee1e096ef8b67c383304b24c
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Aug 13 18:22:08 2018 -0700
+
+    Update CHANGELOG about adding custom object status and scale api
+
+commit 17db994abc5bc2a40b0d0ea108c4cc3c0db8c3a9
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Aug 13 18:16:44 2018 -0700
+
+    generated client update
+    
+    pick up change in kubernetes-client/gen: add custom object status
+    and scale api.
+
+commit b68c3bd68de412ef8239cf799bffb2f60f5e1baf
+Merge: 517d7085 34bbe698
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Mon Aug 13 17:55:40 2018 -0700
+
+    Merge pull request #593 from roycaihw/update-base
+    
+    Update python-base, CHANGELOG and README
+
+commit 34bbe6988a9dc7307ad0f2f1447941efcd73cb05
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Aug 13 17:31:38 2018 -0700
+
+    Update python-base, CHANGELOG and README
+    
+    pick up python-base change: Add support for refreshing Azure tokens.
+    update CHANGELOG and README to prepare for 7.0.0 release.
+
+commit 517d70850c8c5b3e1765b7b03541718ee9bd9940
+Merge: 3c4620b7 d0d21b08
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Mon Aug 6 10:42:53 2018 -0700
+
+    Merge pull request #590 from yliaog/master
+    
+    added yliaog and roycaihw to OWNERS file.
+
+commit d0d21b08fcc61b3a1b6dfdb6b648aa3f985df7f7
+Author: Yu Liao <yliao@google.com>
+Date:   Mon Aug 6 10:30:12 2018 -0700
+
+    added yliaog and roycaihw to OWNERS file.
+
+commit bc805e371b7d8d4814b3109c4fc1b82652264238
+Author: Onkar Ganjewar <ganjewaronkar@gmail.com>
+Date:   Mon Jul 30 15:42:53 2018 -0600
+
+    Update exec.py -- fix typo
+
+commit 8b2b3cd40dbd334e1893a9d0043ee006b4d49871
+Author: Charles Walker <charles.walker.37@gmail.com>
+Date:   Wed Jul 25 23:56:53 2018 +0000
+
+    Update example for remote cluster without override of default client
+
+commit 3c4620b7cabaf068a1a8a016bb406c7c7d9dcf52
+Merge: 8b97f8e5 f984e37d
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Mon Jul 23 13:27:42 2018 -0700
+
+    Merge pull request #579 from brendandburns/req
+    
+    Add Azure Active Directory Library to dependencies.
+
+commit f984e37d7551410db267b4f24daa568d94d1af2a
+Merge: 9afec55f 8b97f8e5
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Mon Jul 23 13:18:18 2018 -0700
+
+    Merge branch 'master' into req
+
+commit 9afec55f4a765b62e9e5b67dffa9d8f68a520987
+Author: Brendan Burns <bburns@microsoft.com>
+Date:   Mon Jul 23 11:03:59 2018 -0700
+
+    Add Azure Active Directory Library to dependencies.
+
+commit 8b97f8e585f733e4190866aabd70d864d537570f
+Merge: cfc453a5 45546c2d
+Author: Yu Liao <yliao@google.com>
+Date:   Mon Jul 23 11:45:37 2018 -0700
+
+    Merge pull request #580 from roycaihw/update-python-base
+    
+    Update base submodule
+
+commit 45546c2d203e61a4c5bda281cfbcf3b150c234c0
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Jul 23 11:06:08 2018 -0700
+
+    Update CHANGELOG to include python-base change
+
+commit 20c782da573db650dd94bb26a1c6117b6bbba800
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Jul 23 11:01:50 2018 -0700
+
+    Update python-base submodule
+    
+    Add Azure support to authentication loading
+
+commit cfc453a5373935b127bf2827ad239de42eed643d
+Merge: 9b438eed a4b61db2
+Author: Yu Liao <yliao@google.com>
+Date:   Wed Jul 11 15:06:15 2018 -0700
+
+    Merge pull request #568 from roycaihw/replace-async
+    
+    Rename parameter async into async_req to support Python 3.7
+
+commit a4b61db271b227be2dd17190966db48d388d73ad
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Jul 11 14:35:11 2018 -0700
+
+    Update CHANGELOG for the async keyword breaking change
+    
+    also update README for v7 release
+
+commit b10c7b6a175ab96291a6f74d68ea6027151f3b71
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Jul 11 14:28:45 2018 -0700
+
+    Rename parameter async into async_req to support Python 3.7
+    
+    as Python 3.7 treats async as a reserved keyword.
+
+commit 9b438eed5a4fdab4377515b5a0c62d695dffc354
+Merge: 54eb120a 81378e77
+Author: Yu Liao <yliao@google.com>
+Date:   Wed Jul 11 14:18:45 2018 -0700
+
+    Merge pull request #567 from roycaihw/update-master-1.11
+    
+    Update version constants for master branch Kubernetes 1.11 snapshot
+
+commit 81378e77f2c850fc135816c77b7e4159ef4791cb
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Jul 11 13:29:09 2018 -0700
+
+    Update CHANGELOG for API changes in Kubernetes 1.11
+
+commit 5f81a65909618521109cc20e107ce5a245885846
+Author: Haowei Cai <haoweic@google.com>
+Date:   Wed Jul 11 13:28:22 2018 -0700
+
+    Generated client change for Kubernetes 1.11
+
+commit fb548ed7f94179bc0ed3d0da5990fa090a8eff19
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Jul 10 18:19:49 2018 -0700
+
+    Update version constants for master branch Kubernetes 1.11 snapshot
+
+commit 54eb120a7146a56c0fabb404a658a1a578b8e875
+Merge: 5ae25c81 2c9fb4d3
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Wed Jul 11 11:39:52 2018 -0700
+
+    Merge pull request #562 from roycaihw/update-base
+    
+    Update python-base submodule to pick up changes
+
+commit 2c9fb4d3c4d6da090608f959000759fed60b086b
+Merge: fd1d1d1e 5ae25c81
+Author: Yu Liao <yliao@google.com>
+Date:   Tue Jul 10 16:57:46 2018 -0700
+
+    Merge branch 'master' into update-base
+
+commit 5ae25c81778116609b10dbec204343fe54c2c0b8
+Merge: e057f273 4ef37f20
+Author: Yu Liao <yliao@google.com>
+Date:   Tue Jul 10 16:55:01 2018 -0700
+
+    Merge pull request #563 from roycaihw/security-contacts
+    
+    Add SECURITY_CONTACTS
+
+commit 4ef37f207f692ecba4a1ff22e312b5324be116d4
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Jul 10 15:57:27 2018 -0700
+
+    Add SECURITY_CONTACTS
+
+commit fd1d1d1eea0c76f4e352859913694b6176492eee
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Jul 10 12:21:03 2018 -0700
+
+    Update python-base submodule to pick up:
+    
+    remove required idp-certificate-authority-data in kubeconfig for oidc
+    token refresh;
+    Watch properly decodes resourceVersion from custom object response.
+
+commit e057f273069de445a2d5a250ac5fe37d79671f3b
+Merge: 22e8cb4c 904f871b
+Author: Yu Liao <yliao@google.com>
+Date:   Fri Apr 13 11:49:04 2018 -0700
+
+    Merge pull request #509 from asottile/only_ipaddress_python_2
+    
+    Only depend on ipaddress in python2
+
+commit 904f871bfcf7a44f57a97c14546173d31db2041e
+Merge: e2b7ee7c 22e8cb4c
+Author: Yu Liao <yliao@google.com>
+Date:   Fri Apr 13 10:45:56 2018 -0700
+
+    Merge branch 'master' into only_ipaddress_python_2
+
+commit 22e8cb4c7c1e033e5dc8bcc0cbe5df2ff1b5198f
+Merge: 74ade9c1 0b03c3bb
+Author: Yu Liao <yliao@google.com>
+Date:   Wed Apr 11 18:01:54 2018 -0700
+
+    Merge pull request #511 from kubernetes-client/roycaihw-patch-1
+    
+    Update maintenance matrix for release 6.0.0
+
+commit 0b03c3bb72d3e2bfca06f9a3bce776e50571e614
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Wed Apr 11 17:18:41 2018 -0700
+
+    Update maintenance matrix for release 6.0.0
+
+commit e2b7ee7c9ee594008894649d2cbcd5080bdd7f62
+Author: Anthony Sottile <asottile@umich.edu>
+Date:   Wed Apr 11 09:22:01 2018 -0700
+
+    Only depend on ipaddress in python2
+    
+    The ipaddress module became a standard module in python3.3.
+    
+    This uses [environment markers][pep508] to only select the `ipaddress` module
+    in python2.7.  In setuptools, the most compatible way to accomplish this is
+    through the `extras_require` field (as suggested in the [wheel][wheel] docs).
+    
+    [pep508]: https://www.python.org/dev/peps/pep-0508/#id23
+    [wheel]: https://wheel.readthedocs.io/en/latest/#defining-conditional-dependencies
+
+commit 74ade9c1fea6a7fc19c0037c77a464a12dc3efda
+Merge: 369366a8 f4539ade
+Author: Yu Liao <yliao@google.com>
+Date:   Tue Apr 10 17:31:43 2018 -0700
+
+    Merge pull request #507 from roycaihw/update-base
+    
+    Update python-base submodule
+
+commit f4539ade40db60aeffeb1024f824b7e5aca7a30d
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Apr 10 16:27:34 2018 -0700
+
+    Update CHANGELOG for python-base submodule update
+
+commit 46a0e10d8ca554299dd47340cf392467e8c90b2d
+Author: Haowei Cai <haoweic@google.com>
+Date:   Tue Apr 10 16:20:56 2018 -0700
+
+    Update python-base submodule
+
+commit 369366a813964e3d72e91d402c5f471275e7a3e5
+Merge: 3888bee8 a5ad719b
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Mar 12 17:25:59 2018 -0700
+
+    Merge pull request #482 from roycaihw/apichange-k8s-1.10
+    
+    Update master to kubernetes 1.10
+
+commit a5ad719bcfdea93c3c783488ff05bb1f2eecd1ca
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Mar 12 15:21:38 2018 -0700
+
+    Fix e2e test to reflect service storage refactoring
+
+commit 304c371a668d369a668499794f59b989004a27cd
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Mar 12 11:12:05 2018 -0700
+
+    Update CHANGELOG for kubernetes 1.10
+
+commit 71b5abce5a4e2d747c0bb26d4eaa17eeb08f8ac5
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Mar 12 11:11:47 2018 -0700
+
+    Generated API change for kubernetes 1.10
+
+commit 828a4a01ec93c0b68549dd8f58d0d742ffc032a2
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Mar 9 15:01:50 2018 -0800
+
+    Bump constants to reflect kubernetes 1.10
+
+commit 3888bee819dbcd3f9fd8ad4c8f3985ed5411202e
+Merge: 12676678 f6e48c22
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Fri Mar 9 13:50:01 2018 -0800
+
+    Merge pull request #475 from roycaihw/update-base
+    
+    Update python-base submodule
+
+commit f6e48c22c7d12bc42e372622e60cbf72495d2b02
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Mar 9 11:28:30 2018 -0800
+
+    Update CHANGELOG for python-base submodule update
+
+commit 003f933df4aedd7fc53b70c8c55b88ee2eb4f19e
+Author: Haowei Cai <haoweic@google.com>
+Date:   Thu Mar 8 11:23:02 2018 -0800
+
+    Update python-base submodule
+
+commit 1267667887723beb6c657a08317c77e9dbf2bf2d
+Merge: 3f4d09d2 9cf23e7d
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Mar 9 11:44:54 2018 -0800
+
+    Merge pull request #477 from roycaihw/apichange-6.0
+    
+    API change for v6.0.0b1
+
+commit 9cf23e7d190a29ebc2d5af56703eed9ac1d4da30
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Mar 9 11:10:39 2018 -0800
+
+    Update README and CHANGELOG for v6.0.0b1
+
+commit f603fd6fadf6359f766edcec74710524c6606040
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Mar 9 11:09:40 2018 -0800
+
+    Generated API change for v6.0.0b1
+    
+    add PATCH to custom_objects_api
+    documentation update: never let cluster-scoped resources skip webhooks
+
+commit a3f619528153f379d1ebc24248335d28b9eafe96
+Merge: 317aeeec 3f4d09d2
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Feb 26 15:29:30 2018 -0800
+
+    Merge branch 'master' into master
+
+commit 3f4d09d260cf0839fae8173852c69e0419188454
+Merge: 047b3666 9bcdc2bb
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Feb 12 18:11:57 2018 -0800
+
+    Merge pull request #457 from roycaihw/base-update
+    
+    Update python-base submodule
+
+commit 9bcdc2bbb752a7b7f57c6a7cb269ec3148e34521
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Feb 12 17:24:54 2018 -0800
+
+    Update python-base submodule
+
+commit 047b366644b452e951a6a8d65231f3c312946026
+Merge: eeaf4f8c 28ced970
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Feb 12 16:36:16 2018 -0800
+
+    Merge pull request #456 from roycaihw/master
+    
+    Update CHANGELOG and README for v5.0.0
+
+commit 28ced970157bd1e57ee0658c1d1071521a0fc0d2
+Author: Haowei Cai <haoweic@google.com>
+Date:   Mon Feb 12 16:01:54 2018 -0800
+
+    Update CHANGELOG and README for v5.0.0
+
+commit 317aeeec2279f68daf70d0b7bf8e14ee1859f599
+Author: Charles Walker <charles.walker.37@gmail.com>
+Date:   Sat Jan 27 10:00:44 2018 -0500
+
+    Add example for remote cluster without kube client on server
+
+commit eeaf4f8c3426f099e2d6ebf82300f5286d473b4d
+Merge: 3b5dc66d a949dde5
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jan 26 17:37:44 2018 -0800
+
+    Merge pull request #444 from kubernetes-client/roycaihw-patch-1
+    
+    Update README.md
+
+commit a949dde56f2200c5ac87e0a5f66cc38041e4dbfa
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Fri Jan 26 17:04:55 2018 -0800
+
+    Update README.md
+
+commit 3b5dc66d8a840f2df681d72ca527f9e067ef6bef
+Merge: b176bad5 ed052519
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Fri Jan 26 15:58:45 2018 -0800
+
+    Merge pull request #442 from roycaihw/master
+    
+    Update org and repo name
+
+commit ed052519da5498e0b37b39b32b8a9379e05f59ec
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Jan 26 15:41:55 2018 -0800
+
+    Update org and repo name
+
+commit b176bad56897384cad38f44a6a8189504895c359
+Merge: 0b2f12a8 12d0bcb0
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Fri Jan 26 14:36:34 2018 -0800
+
+    Merge pull request #440 from roycaihw/master
+    
+    Update master to kubernetes 1.9
+
+commit 12d0bcb04a2cfa7c04fb774bb9c6e21eb24f7f88
+Merge: bd050ed9 0b2f12a8
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Fri Jan 26 14:03:35 2018 -0800
+
+    Merge branch 'master' into master
+
+commit 0b2f12a808bfb67e8d8db8c492f634c257b643a5
+Merge: 15e2bc14 87a8354c
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Fri Jan 26 14:03:20 2018 -0800
+
+    Merge pull request #432 from jdartigalongue/master
+    
+    Update python-base submodule
+
+commit 87a8354c3d0ac60e1170aaa3a61f53304a1ced1f
+Merge: f9173261 15e2bc14
+Author: Haowei Cai (Roy) <haoweic@google.com>
+Date:   Fri Jan 26 13:49:29 2018 -0800
+
+    Merge branch 'master' into master
+
+commit bd050ed9e8ee4409853b992e78823bbbcb05a379
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Jan 26 13:46:40 2018 -0800
+
+    Update CHANGELOG
+
+commit 3abfdf9ebdb87b74940c96f55047c42d89124504
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Jan 26 13:44:27 2018 -0800
+
+    Update master to kubernetes 1.9
+
+commit b49837bb13d2d46dc3045e0e1cb7551b4a21acf2
+Author: Haowei Cai <haoweic@google.com>
+Date:   Fri Jan 26 13:43:06 2018 -0800
+
+    Bump constants to reflect kubernetes 1.9
+
+commit 15e2bc149816518702b181b960fb3be558b4e0d7
+Merge: 9e982cbd 284e9d05
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jan 25 17:26:21 2018 -0800
+
+    Merge pull request #439 from roycaihw/master
+    
+    Api change v1beta2 adding required controller spec selector fields
+
+commit 284e9d05bf7b6db5620d2b4c9da797128bf326f4
+Author: Haowei Cai <haoweic@google.com>
+Date:   Thu Jan 25 15:22:26 2018 -0800
+
+    Api change v1beta2 adding required controller spec selector fields
+
+commit f91732612cd781ce197fe9513a43571f17bd1919
+Author: Jeremy Dartigalongue <jeremy.dartigalongue@outlook.com>
+Date:   Tue Jan 16 21:41:06 2018 +0000
+
+    Update python-base
+
+commit 9e982cbdb5f19dc1a3935a75bdd92288f3b807fb
+Merge: a32135a9 e052af39
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Jan 8 11:06:34 2018 -0800
+
+    Merge pull request #414 from mbohlool/master
+    
+    Fix compatibility matrix
+
+commit e052af3998d8c50318b48b3e15b598ec231f9b35
+Merge: 4145396e a32135a9
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Jan 8 11:06:25 2018 -0800
+
+    Merge branch 'master' into master
+
+commit a32135a94313402d676d604eef46810a5d02fe10
+Merge: d3daaab0 48c26c8b
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Jan 8 11:06:01 2018 -0800
+
+    Merge pull request #421 from spiffxp/update-code-of-conduct
+    
+    Update code-of-conduct.md
+
+commit 48c26c8bc25db7722dbaeef9e030b061bbf16e4e
+Merge: e87b3522 d3daaab0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Jan 8 11:05:52 2018 -0800
+
+    Merge branch 'master' into update-code-of-conduct
+
+commit d3daaab0d48db3aa02dca52cf9de70f40d58663a
+Merge: 30b8ee44 a3ef4c43
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jan 3 16:56:57 2018 -0800
+
+    Merge pull request #416 from prometheanfire/uncap-requirements
+    
+    make websocket-client dependency more open
+
+commit e87b35225016b2c6377e8098a679f176c4a53200
+Author: Aaron Crickenberger <spiffxp@gmail.com>
+Date:   Wed Dec 20 14:11:09 2017 -0500
+
+    Update code-of-conduct.md
+    
+    Refer to kubernetes/community as authoritative source for code of conduct
+
+commit a3ef4c4357a6280abc5acd79d462a49fad2afc85
+Author: Matthew Thode <mthode@mthode.org>
+Date:   Wed Dec 13 01:19:49 2017 -0600
+
+    make websocket-client dependency more open
+    
+    fixes: https://github.com/kubernetes-incubator/client-python/issues/413
+    
+    The issue as reported in https://github.com/kubernetes-incubator/client-python/issues/262
+    was not reproduced in versions of websocketclient over 0.43.0, so just mask
+    the known bad versions.  This allows consumption of possible security fixes and
+    allows the client to be co-installable with more python libraries.
+
+commit 4145396eb39ca712a47683992ca6514dde0ccad4
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Dec 12 12:05:23 2017 -0800
+
+    Fix compatibility matrix
+
+commit 30b8ee44f4d14546e651dead91306719d53f8c37
+Merge: 105f4f8e f3b11ef5
+Author: Yu Liao <yliao@google.com>
+Date:   Mon Nov 20 15:27:56 2017 -0800
+
+    Merge pull request #400 from kubernetes-incubator/yliaog-patch-2
+    
+    Update README.md
+
+commit f3b11ef51b4edf1c41be647c3b136001f6d9f84c
+Author: Yu Liao <yliao@google.com>
+Date:   Mon Nov 20 12:44:28 2017 -0800
+
+    Update README.md
+
+commit 2a616a1a3d1384bac457022a1613f6728cbf1138
+Author: Yu Liao <yliao@google.com>
+Date:   Mon Nov 20 12:42:47 2017 -0800
+
+    Update README.md
+
+commit 105f4f8e8e40079fe99cf4a5bff729e8f0a85994
+Merge: fd5a0c49 7bff95ab
+Author: Yu Liao <yliao@google.com>
+Date:   Mon Nov 20 11:24:14 2017 -0800
+
+    Merge pull request #398 from kubernetes-incubator/yliaog-patch-2
+    
+    Update CHANGELOG.md
+
+commit 7bff95ab2ac2d296103894940acadbf6693d8227
+Merge: dd844ad3 fd5a0c49
+Author: Yu Liao <yliao@google.com>
+Date:   Mon Nov 20 10:48:11 2017 -0800
+
+    Merge branch 'master' into yliaog-patch-2
+
+commit fd5a0c49259e83d928535dd66ab083ddb92ccecf
+Merge: 90415d0c da34e81c
+Author: Yu Liao <yliao@google.com>
+Date:   Mon Nov 20 10:46:06 2017 -0800
+
+    Merge pull request #397 from kubernetes-incubator/yliao-patch
+    
+    api change V1PersistentVolumeSpec to V1ScaleIOPersistentVolumeSource
+
+commit da34e81c2dfa2081dfff2a48cdbf156ce305c1bf
+Merge: e5ea1cf2 90415d0c
+Author: Daniel Smith <dbsmith@google.com>
+Date:   Fri Nov 17 21:20:13 2017 -0800
+
+    Merge branch 'master' into yliao-patch
+
+commit dd844ad361857fc877db5e3c2d10fc3fcf2ff94f
+Author: Yu Liao <yliao@google.com>
+Date:   Fri Nov 17 17:52:56 2017 -0800
+
+    Update CHANGELOG.md
+    
+    pr #397
+
+commit e5ea1cf223e747852460674819230562dc2d90de
+Author: Yu Liao <yliao@google.com>
+Date:   Fri Nov 17 17:19:45 2017 -0800
+
+    api change V1PersistentVolumeSpec to V1ScaleIOPersistentVolumeSource
+
+commit 90415d0ca93b82ad82e3261006cebf40091a6cbc
+Merge: 421f1249 225345a5
+Author: Daniel Smith <dbsmith@google.com>
+Date:   Fri Nov 17 14:40:34 2017 -0800
+
+    Merge pull request #396 from kubernetes-incubator/yliaog-patch-1
+    
+    Update CHANGELOG.md
+
+commit 225345a55826f91f01d4599310ec7f5efa2cc782
+Author: Yu Liao <yliao@google.com>
+Date:   Fri Nov 17 14:06:23 2017 -0800
+
+    Update CHANGELOG.md
+
+commit 421f1249f7d01aa087b816ec1c44c0d105619683
+Merge: 4ee5ec19 5bb81dd8
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Nov 7 13:49:21 2017 -0800
+
+    Merge pull request #383 from kubernetes-incubator/mbohlool-patch-2
+    
+    Update CHANGELOG.md
+
+commit 5bb81dd80035043966f8084421f77ff15a1d7880
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Nov 7 13:47:51 2017 -0800
+
+    Update CHANGELOG.md
+
+commit 4ee5ec19326df74dc59ea726ed2d5144d0881676
+Merge: e382e0db 60e0b614
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Nov 3 10:51:34 2017 -0700
+
+    Merge pull request #377 from spiffxp/assignees-to-approvers
+    
+    Rename OWNERS assignees: to approvers:
+
+commit 60e0b6146e080b26d7a7614d002c4717461be10b
+Author: Aaron Crickenberger <spiffxp@gmail.com>
+Date:   Tue Oct 31 17:37:08 2017 -0700
+
+    Rename OWNERS assignees: to approvers:
+    
+    They are effectively the same, assignees is deprecated
+
+commit e382e0db2ad0da62980f1c930e3966328fca1141
+Merge: de1d7636 23f400f7
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Oct 24 13:28:57 2017 -0700
+
+    Merge pull request #371 from dims/patch-1
+    
+    Update CHANGELOG.md
+
+commit 23f400f72bb2fa1da4999971572ec0d5a125c3c8
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Thu Oct 19 14:03:11 2017 -0400
+
+    Update CHANGELOG.md
+    
+    Add info about https://github.com/kubernetes-incubator/client-python/pull/369
+
+commit de1d7636975f57b6577c77ccb7494a28e222e3dd
+Merge: 8665a762 480723fe
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Oct 19 10:51:34 2017 -0700
+
+    Merge pull request #369 from dims/add-file-to-dist-tgz
+    
+    Add files in root directory to dist
+
+commit 480723fe2d691ade0f3018c41c56edcfccf715e0
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Wed Oct 18 17:30:42 2017 -0400
+
+    Add files in root directory to dist
+    
+    By adding a MANIFEST.in, we can list the files we need to include
+    into the tgz when we run "python setup.py sdist". With this change
+    you should see the following files in the tgz file.
+    
+    LICENSE
+    MANIFEST.in
+    OWNERS
+    PKG-INFO
+    README.md
+    RELEASE.md
+    requirements.txt
+    setup.cfg
+    setup.py
+    test-requirements.txt
+    tox.ini
+
+commit 8665a7621c186fa533c215c42a0e7ed34978b3bf
+Merge: 640c2aad 695a05f6
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Oct 18 13:16:40 2017 -0700
+
+    Merge pull request #345 from DjangoPeng/master
+    
+    add examples of deployment object
+
+commit 640c2aad297f4b4e7861ee86567b519a5b205f5a
+Merge: c7152b3b ca71ff7b
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Oct 17 09:19:35 2017 -0700
+
+    Merge pull request #367 from mbohlool/master
+    
+    Update documents for 4.0.0a release
+
+commit ca71ff7b2c1a204f7072e502b9c455d25c5666b5
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Oct 17 09:16:31 2017 -0700
+
+    Update documents for 4.0.0a release
+
+commit c7152b3b2dbb342947129c1b364632af8f2728e2
+Merge: 2c0bed9c c826f7b6
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Oct 17 09:07:32 2017 -0700
+
+    Merge pull request #366 from mbohlool/b2
+    
+    Change IntOrString field types from string to object
+
+commit c826f7b6e7d9d214bed4e3c391b5973809013152
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Oct 17 07:49:52 2017 -0700
+
+    update CHANGELOG, adding a release note
+
+commit 7c1819373f0bcc1546feb5e151d9223b8da43d9a
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Oct 12 16:36:01 2017 -0700
+
+    Change IntOrString field types from string to object
+
+commit 2c0bed9c4f653472289324914a8f0ad4cbb3a1cb
+Merge: ce387b3b 22e473e0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Oct 16 13:19:01 2017 -0700
+
+    Merge pull request #364 from kubernetes-incubator/mbohlool-patch-1
+    
+    Fix badge links
+
+commit 22e473e02883aca1058606092c86311f02f42be2
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Oct 16 13:17:57 2017 -0700
+
+    Fix badge links
+
+commit 695a05f6babd028c0e5e33319e66d72e2f046b13
+Author: DjangoPeng <pjt73651@gmail.com>
+Date:   Fri Oct 13 12:23:11 2017 +0800
+
+    make examples work on latest master branch
+
+commit 8af0a10a63dcff61c414c739e57fcee68a382531
+Merge: 24435a5b ce387b3b
+Author: DjangoPeng <pjt73651@gmail.com>
+Date:   Fri Oct 13 09:17:53 2017 +0800
+
+    Merge branch 'master' of https://github.com/kubernetes-incubator/client-python
+
+commit 24435a5b04632e4c33cd78217eebe4fc510c4515
+Author: DjangoPeng <pjt73651@gmail.com>
+Date:   Thu Oct 12 18:20:46 2017 +0800
+
+    fix syntax error
+
+commit ce387b3b6b53018f815a1f2174f30d28fa5adb5b
+Merge: 7e4b8090 6b1a80c6
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Oct 11 15:03:49 2017 -0700
+
+    Merge pull request #357 from mbohlool/b1
+    
+    Updte master to kubernetes 1.8
+
+commit 6b1a80c67f79b58a1d5e357dea228f42d53a8592
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Oct 9 17:56:32 2017 -0700
+
+    Updte master to kubernetes 1.8
+
+commit 7e4b80903677b791ea96af0c78fcc07e06038ac8
+Merge: 53e882c9 19359213
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Oct 9 17:49:08 2017 -0700
+
+    Merge pull request #353 from mbohlool/b1
+    
+    Use swagger-codegen HEAD to generate the client
+
+commit 19359213b5e32d4ea014cdf00690d1be3c67f09c
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Oct 5 17:38:18 2017 -0700
+
+    Update CHANGELOGS and final touch ups
+
+commit 1d27f7e71bad03bb15f5026c9d4af4f292972558
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Oct 5 17:38:10 2017 -0700
+
+    Fix end to end tests
+
+commit 789e37464b8512ee4687ecf03221ff088afde450
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Oct 5 17:37:49 2017 -0700
+
+    Fix (hack) rest client for patch
+
+commit 77a504e294cd3e0bf95245ae06fa90b3cf95a476
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Oct 3 13:07:48 2017 -0700
+
+    Fix exec example to use new configuration model
+
+commit bc2aac4897f31af8c8b9ad21155e2b9ad455afbd
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Oct 3 13:00:55 2017 -0700
+
+    Update base to get fixes to utility functions because of using new generated client
+
+commit 478254382594466721f2374e6c23d0b2888b9f92
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Oct 3 11:39:38 2017 -0700
+
+    Remove config, apiClient, and restClient from ignore list of swagger-codegen and regenerate client using HEAD of the generator
+
+commit 63d667a45e2b815bd78ef6470fe7524d8b685942
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Oct 3 13:00:29 2017 -0700
+
+    Update generated client first
+
+commit 53e882c920d34fab84c76b9e38eecfed0d265da1
+Merge: dbb09089 ccf288c4
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Oct 6 15:29:14 2017 -0700
+
+    Merge pull request #356 from larsks/bug/355
+    
+    make sure that kubernetes.stream module gets installed
+
+commit ccf288c49ab23a71dc8ecd430649e421ab718744
+Author: Lars Kellogg-Stedman <lars@oddbit.com>
+Date:   Fri Oct 6 17:06:10 2017 -0400
+
+    make sure that kubernetes.stream module gets installed
+    
+    Previously, installing the client using `python setup.py install`
+    would fail to install the `kubernetes.stream` module, leading to
+    errors when trying to `import kubernetes`.
+    
+    Closes #355
+
+commit dbb09089d34eae1788b6918008d6d1d9f5af49a5
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Sep 27 18:25:23 2017 -0700
+
+    Create code-of-conduct.md
+
+commit 6c7235db2225adf79bd6c9c78b5499d45788ae9e
+Author: DjangoPeng <pjt73651@gmail.com>
+Date:   Wed Sep 27 18:20:20 2017 +0800
+
+    securely update deployment with patch_namespaced_deployment
+
+commit c49db53c58c46f2412a4af6a2bcf101f3fecb42f
+Author: DjangoPeng <pjt73651@gmail.com>
+Date:   Wed Sep 27 06:46:35 2017 +0800
+
+    update for pep8
+
+commit cc8e38b46ee79b08c76b31d173301549722693b9
+Author: DjangoPeng <pjt73651@gmail.com>
+Date:   Sun Sep 24 11:22:13 2017 +0800
+
+    add examples of deployment object
+
+commit 58a55d43ec44faf47de757db73a9144cdec1ee67
+Merge: e2693c4d 27ba35aa
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Sep 22 13:45:50 2017 -0700
+
+    Merge pull request #344 from mbohlool/stream
+    
+    Use stream module to call exec/attach calls
+
+commit 27ba35aa81aa72c0034e497fcac1a01c88014c4e
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Sep 22 11:42:41 2017 -0700
+
+    Use stream module to call exec/attach calls
+
+commit 55ef46b6cfe6b7ae8e5a6a382ba31ab948d8b677
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Sep 22 11:27:06 2017 -0700
+
+    Update base to latest commit with stream module added
+
+commit e2693c4dc2e09d48109d6cc1abadcb2e25adb100
+Merge: cbe7ed5a 9f1f54e0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Sep 19 00:59:52 2017 -0700
+
+    Merge pull request #304 from djkonro/create_configmap
+    
+    Add notebook on how to create a ConfigMap and use its data in Pods
+
+commit 9f1f54e0f76676a184769131d2f12bab24a159f6
+Merge: f9b342b2 cbe7ed5a
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Sep 19 00:59:27 2017 -0700
+
+    Merge branch 'master' into create_configmap
+
+commit cbe7ed5a02c0b6fadef6f5634a0be9b9eb6eff30
+Author: Damian Myerscough <dmyerscough@users.noreply.github.com>
+Date:   Wed Aug 30 03:21:53 2017 -0700
+
+    Update requirements library for oidc auth (#331)
+    
+    * Update requirements library for oidc auth
+    
+    * Update requirements library for oidc auth
+
+commit 6ed1f20f26ec307df87e7ca45f1b774717ca567b
+Merge: 5128cd88 939e735a
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Aug 28 16:06:54 2017 -0700
+
+    Merge pull request #281 from djkonro/watch
+    
+     Add notebook on how to watch changes to an object
+
+commit 5128cd883fafe483b33d4327d4d8f213fc9e01c8
+Merge: 01f6875e 1cf94189
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Aug 28 16:06:36 2017 -0700
+
+    Merge pull request #301 from djkonro/secret
+    
+    Add notebook on how to create and use a Secret
+
+commit 939e735a00833ae09e7bef6806a30906a918488f
+Author: djkonro <konraddjimeli@gmail.com>
+Date:   Wed Jul 5 10:33:28 2017 +0100
+
+    Add notebook on how to watch changes to an object
+
+commit f9b342b29bf8e03459df195e1b3a9d8dc39992ec
+Author: djkonro <konraddjimeli@gmail.com>
+Date:   Mon Jul 24 00:50:33 2017 +0100
+
+    Add notebook on how to create a ConfigMap and use its data in Pods
+
+commit 1cf94189350e412441d5457406a110509749e8b4
+Author: djkonro <konraddjimeli@gmail.com>
+Date:   Fri Jul 21 21:58:39 2017 +0100
+
+    Add notebook on how to create a Secret
+
+commit 01f6875ed4e7c40855cf9ba7fd6d8dc1a1ba40c3
+Merge: e2e422b7 3b66dde0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Aug 16 02:01:30 2017 -0700
+
+    Merge pull request #318 from brejoc/patch-1
+    
+    Introducing __version__ variable
+
+commit 3b66dde057b19792f673a12262b14730dbd92d37
+Author: Jochen Breuer <jbreuer@suse.de>
+Date:   Wed Aug 16 08:10:03 2017 +0200
+
+    Changes from update-client.sh
+
+commit 1054f10c6d526a52c3b3a9756a231d2c923bbaf8
+Author: Jochen Breuer <jbreuer@suse.de>
+Date:   Thu Aug 10 23:24:56 2017 +0200
+
+    Introducing __version__ and __project__ variables
+    
+    Version information comes from scripts/constants.py and is hard-coded to
+    kubernetes/__init__py by scripts/update-client.sh.
+    
+    __project__ is just hard-coded.
+    
+    Fixes #317
+
+commit e2e422b72c1c5eb272879522362b7bb5dc85de6c
+Merge: f9a01969 ed7a1f17
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Aug 10 17:52:58 2017 -0700
+
+    Merge pull request #307 from mbohlool/update_gen
+    
+    Release 3.0 - Update generated client and documentations
+
+commit ed7a1f170cd9d5b0024c0f259b62ba77905b328a
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Aug 10 17:42:40 2017 -0700
+
+    Update compatibility matrix
+
+commit 49598cd276e22ff3630d24b12cd7bf631a66c67f
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Aug 10 17:36:27 2017 -0700
+
+    update changelog
+
+commit b4f852a9d9f16063f644c8829a0e147c24d51aa9
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Jul 26 11:33:28 2017 -0700
+
+    update generated client to get https://github.com/kubernetes/kubernetes/pull/49357
+
+commit f9a019698e891549ab58f201ebbf99d24ddc01ce
+Merge: 6b555de1 c3d3ea82
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 28 11:22:34 2017 -0700
+
+    Merge pull request #298 from jraby/v4_stream_proto
+    
+    Set Sec-WebSocket-Protocol header from cfg param
+
+commit c3d3ea82d207deaafb191ab960d073c1c7f9dfa5
+Author: Jean Raby <jean@raby.sh>
+Date:   Tue Jul 18 17:25:26 2017 -0400
+
+    Support for v4 stream protocol
+    
+    - Set Sec-WebSocket-Protocol header from cfg param
+    - Add ERROR and RESIZE websocket channels
+      As defined in pkg/kubelet/server/remotecommand/websocket.go
+    - Adjust tests to show v4 behavior wtr to status message
+    - Tweak read_all() to return only data from stdout and stderr.
+
+commit 6b555de1c7a1a291d0afcba91823ff419a044ca0
+Merge: 023fcf5e dabdec69
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jul 25 13:14:35 2017 -0700
+
+    Merge pull request #305 from mbohlool/gce_config
+    
+    Update base submodule
+
+commit dabdec6967750591fa6a33a8892b972475153921
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jul 25 13:00:47 2017 -0700
+
+    Update Changelog for 3.0.0b1 release
+
+commit d518be4ad371839c8e717766b02bb89d2a08352b
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jul 25 03:27:57 2017 -0700
+
+    Update base submodule
+
+commit 023fcf5eb6d5f1ed82e6a4e2a689fe10e7dbec52
+Merge: bca588fb e447a955
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 21 17:36:33 2017 -0700
+
+    Merge pull request #302 from mbohlool/gce_config
+    
+    Add requests requirement for gce config refresher
+
+commit e447a955a07b1db3e36fe41247287f1f10bc19dd
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Jul 21 14:46:51 2017 -0700
+
+    Add requests requirement for gce config refresher
+
+commit bca588fbb3d40c56726d1ea1388b47b84b997538
+Merge: e6e7b710 065335bc
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jul 20 10:17:16 2017 -0700
+
+    Merge pull request #299 from mccullya/master
+    
+    Amendment to PR 270 (issue #262)
+
+commit 065335bc65a267033e398b433c059ba944d01d5f
+Author: BoySherman <mccullya@gmail.com>
+Date:   Thu Jul 20 09:22:53 2017 +0100
+
+    Updating requirement to ensure that a version of websocket greather than or equal to  0.32.0 is used
+
+commit c4aac96342a1c3444b3eedf0a9da63353e25cf3d
+Author: BoySherman <mccullya@gmail.com>
+Date:   Wed Jul 19 13:15:22 2017 +0100
+
+    Restricting the websocket-client to <=0.40, present PR allows for 0.44 which has again become broken
+
+commit e6e7b710d0b15fbde686bc9dccf00da5951bef84
+Merge: fc85c6aa 1d2369e1
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Sun Jul 9 15:46:04 2017 -0700
+
+    Merge pull request #293 from yuvipanda/update-maxsize
+    
+    Submodule bump for kubernetes-client/python-base#18
+
+commit fc85c6aaaab4672af000a0e551e3f01a7d9f8af2
+Merge: 3de4c355 cd5d5e2d
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Sun Jul 9 09:38:17 2017 -0700
+
+    Merge pull request #292 from mbohlool/jupyter
+    
+    Add a little more detail to jupyter getting start with minikube
+
+commit 1d2369e15d9db6c48d7a6e46c0bd7966ff9ef5c1
+Author: yuvipanda <yuvipanda@gmail.com>
+Date:   Sun Jul 9 00:31:31 2017 -0700
+
+    Submodule bump for kubernetes-client/python-base#18
+
+commit cd5d5e2d8c4164ecd2960330aafc3e62607dd696
+Author: mbohlool <mehdy@google.com>
+Date:   Sat Jul 8 23:34:22 2017 -0700
+
+    Add a little more detail to jupyter getting start with minikube
+
+commit 3de4c355e9078343b3bc259318483c8cd0bdaf2f
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 7 14:40:34 2017 -0700
+
+    Update release.md
+
+commit e95cac42353cedcd3607d838804cab34de2f2451
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 7 14:35:10 2017 -0700
+
+    Update release.md
+
+commit f6d80b06cf004fd518d21d06099492abf83e00ec
+Merge: 917ec63d ebb23b7c
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 7 11:35:01 2017 -0700
+
+    Merge pull request #287 from dims/use-latest-localkube
+    
+    Test with latest localkube version
+
+commit ebb23b7ca1331e5386bc8685d5f1558658037aa1
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Fri Jul 7 11:08:55 2017 -0400
+
+    Test with latest localkube version
+    
+    Oops! we are using a really old version, let's switch over to v1.7.0
+
+commit 917ec63d510154303f1508b042f9b76d4e981d93
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 7 10:26:25 2017 -0700
+
+    Support both TPR and CRD with custom objects spec (#283)
+    
+    * Add ability to use local gen repo for testing
+    
+    * Update generated client
+
+commit afe706d63a3d46626381e465f8e236128f539c05
+Author: Spyros Trigazis <strigazi@gmail.com>
+Date:   Fri Jul 7 19:26:06 2017 +0200
+
+    Remove oauth2client requirement (#286)
+    
+    In #278 google-auth was added in requirements and in [1]
+    python-base stopped using it.
+    
+    Remove oauth2client requirement and update submodule commit.
+    
+    [1] https://github.com/kubernetes-client/python-base/pull/16
+    
+    Related-Issue: #275
+    
+    Signed-off-by: Spyros Trigazis <spyridon.trigazis@cern.ch>
+
+commit 2fac3c71bf2be8914efbef5f487b7efd8965e811
+Merge: 9ba5378f 0a4af95e
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 7 10:25:19 2017 -0700
+
+    Merge pull request #250 from djkonro/create_service
+    
+    Add notebook on how to create a Service
+
+commit 9ba5378f96add825763400955d4c29b5b0f30359
+Merge: 1471c6d4 7d98dccb
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 7 10:25:07 2017 -0700
+
+    Merge pull request #239 from djkonro/master
+    
+    Update create_deployment notebook
+
+commit 1471c6d455e57081c8bc5def3fa20bf5cc9c876b
+Merge: 8b988ba8 7b559b9c
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 7 10:24:45 2017 -0700
+
+    Merge pull request #261 from djkonro/remove_output
+    
+    Remove code execution output from create_pod notebook
+
+commit 8b988ba8f9982004767f7caef18a65526dfba2b8
+Merge: a73407a6 e87c3bb9
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 7 10:24:05 2017 -0700
+
+    Merge pull request #272 from djkonro/intro_notebook
+    
+    Add introductory notebook
+
+commit a73407a6a3444a54634b4d9a9ff5ffcc4021eefb
+Merge: 7fd6d559 70bbe4ce
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jul 7 09:27:29 2017 -0700
+
+    Merge pull request #285 from kubernetes-incubator/mbohlool-patch-2
+    
+    Update CHANGELOG.md
+
+commit 70bbe4ce25f78a98231a5c114a91bd153f990759
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jul 6 18:39:38 2017 -0700
+
+    Update CHANGELOG.md
+
+commit 7fd6d559b8e8632b47ba7eb6a6a2e7a0c789ba90
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Thu Jul 6 21:27:30 2017 -0400
+
+    Use py.test instead of nosetests for better problem reporting (#282)
+    
+    nosetests output is not very useful for diagnosing issues when
+    running in travis. Let us switch to py.test
+
+commit 0a4af95e3c069ce6e4125c173f73f988b5b544c8
+Author: djkonro <konraddjimeli@gmail.com>
+Date:   Fri Jun 9 14:24:48 2017 +0100
+
+    Add notebook on how to create a Service
+
+commit 7b559b9c1c3d386a9a6fbff0c3d073d48f6af191
+Author: djkonro <konraddjimeli@gmail.com>
+Date:   Mon Jun 19 20:42:14 2017 +0100
+
+    Remove code execution output from create_pod notebook
+
+commit 7d98dccb669317f24727b186ad80811f8cfc6784
+Author: djkonro <konraddjimeli@gmail.com>
+Date:   Sat Jun 3 17:55:33 2017 +0100
+
+    Update create_deployment notebook
+
+commit e87c3bb9d5f65fc70a9ea73c6f8d8dd5634bc2ff
+Author: djkonro <konraddjimeli@gmail.com>
+Date:   Wed Jun 28 19:08:22 2017 +0100
+
+    Add introductory notebook
+    
+    This notebook shows how to manage kubernetes objects using
+    common resource operations with the python client
+
+commit bd4b72ebb0915624ac11ceaf7d3bd824f519c57c
+Merge: 820366c7 ae7f2bc9
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jul 6 10:22:12 2017 -0700
+
+    Merge pull request #278 from strigazi/google-auth
+    
+    Add google-auth dependency to be able to use it in python-base repo.
+
+commit 820366c7917c6b9d8522df1245af28232ef7ae75
+Merge: 3595278f d2d49146
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jul 6 10:14:07 2017 -0700
+
+    Merge pull request #284 from mbohlool/use_gen_repo
+    
+    Use kubernetes-client/gen generators to generate python client
+
+commit ae7f2bc9dc707c245acfb24a1d935831bc72ba97
+Author: Spyros Trigazis <strigazi@gmail.com>
+Date:   Thu Jul 6 18:27:33 2017 +0200
+
+    Use oauth2 from google-auth
+    
+    oauth2client is deprecated [1], use google-auth.
+    
+    When kubernetes-client/base-python is updated to not use
+    oauth2client, remove oauth2client.
+    
+    [1] https://github.com/google/oauth2client/releases (see Note)
+    
+    Closes: #275
+    
+    Signed-off-by: Spyros Trigazis <spyridon.trigazis@cern.ch>
+
+commit d2d49146e5eca4bc35ddaac338ef7d0e8b7a861b
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Jul 6 02:12:25 2017 -0700
+
+    Use kubernetes-client/gen generators to generate python client
+
+commit 3595278fec08ca0acc8f29d514352f08d952c968
+Merge: 5e268fb0 0a4b52a0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jul 5 15:43:06 2017 -0700
+
+    Merge pull request #268 from flavio/manage-node-labels-example
+    
+    Add example about node label management
+
+commit 0a4b52a0aaa4c244139d31d0ac96b877995d800c
+Author: Flavio Castelli <fcastelli@suse.com>
+Date:   Fri Jun 23 09:31:03 2017 +0200
+
+    Add example about node label management
+    
+    Show how to add/remove/change node labels.
+    
+    Signed-off-by: Flavio Castelli <fcastelli@suse.com>
+
+commit 5e268fb0b6f21a535a14a7f968b84ed4486f6774
+Merge: 7650c9a6 5900a4c8
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jun 30 14:42:50 2017 -0700
+
+    Merge pull request #273 from mbohlool/update_client
+    
+    Update master to follow kubernetes 1.7 branch
+
+commit 5900a4c8c581a1ab57ed2284c4b2da0618d48a2b
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Jun 30 14:15:10 2017 -0700
+
+    Fix Travis CI failure
+
+commit ef558a5ce41fd65ea823dd5b0d7320f39f56bba5
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Jun 29 01:34:59 2017 -0700
+
+    Update generated client
+
+commit 21e071a5da8406aff3a484e0338ea818a6a42579
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Jun 29 01:24:54 2017 -0700
+
+    Master to follow kubernetes 1.7 branch
+
+commit 7650c9a600d293428c20b4166b78013674bf9a64
+Merge: 04f059ab b0bc0bea
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Sat Jun 24 23:38:21 2017 -0700
+
+    Merge pull request #267 from blackwoodseven/master
+    
+    Swap order of parameters 'name' and 'namespace' for TPRs
+
+commit b0bc0beac48706d1494b6276a928091d187c262e
+Author: Ebbe Elsborg <ee@blackwoodseven.com>
+Date:   Fri Jun 23 09:17:58 2017 +0200
+
+    Generate client with 'name' and 'namespace' swapped for TPRs
+
+commit 02283ea5d140abb24a557d2ad5603f7680347d21
+Author: Ebbe Elsborg <ee@blackwoodseven.com>
+Date:   Fri Jun 23 09:16:03 2017 +0200
+
+    Swap parameters 'name' and 'namespace' for TPRs
+    
+    This is to align with the standard API.
+    Note: This is a breaking change.
+
+commit 04f059aba29209c06d8d227bc5e462c8d95a226b
+Merge: 4eac56a8 1849b1fe
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jun 22 10:56:20 2017 -0700
+
+    Merge pull request #265 from blackwoodseven/master
+    
+    Parametrize resource path with version part of apiVersion
+
+commit 1849b1fe5698ee0a617ad306a4d04973b3e58375
+Author: Ebbe Elsborg <ee@blackwoodseven.com>
+Date:   Wed Jun 21 12:41:31 2017 +0200
+
+    Generate client with 'version' parameter
+
+commit 69bce1aeb2c7da500dce711ec87979a310761255
+Author: Ebbe Elsborg <ee@blackwoodseven.com>
+Date:   Wed Jun 21 12:37:32 2017 +0200
+
+    Parametrize resource path with 'version' parameter
+    
+    Add parameter 'name' to update operation
+
+commit 2e67319b97867ee6835fde9ffefe802abdd7219a
+Author: Ebbe Elsborg <ee@blackwoodseven.com>
+Date:   Wed Jun 21 12:30:35 2017 +0200
+
+    Run update-client.sh
+
+commit 4eac56a8b65d56eb23d738ceb90d3afb6dbd96c1
+Merge: 7f5bba31 97ee0d80
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jun 21 01:31:03 2017 -0700
+
+    Merge pull request #259 from codevulture/travis_check
+    
+    Travis Fix for E2E tests
+
+commit 97ee0d804fadefcdd743e2d6adaab345f154f088
+Author: codevulture <janonymous.codevulture@gmail.com>
+Date:   Sun Jun 18 17:34:46 2017 +0530
+
+    Travis Fix for E2E tests
+
+commit 7f5bba3190089749e79009d768554a63d41199a0
+Merge: 5521d847 f62cff98
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jun 21 00:26:37 2017 -0700
+
+    Merge pull request #260 from avinassh/in-cluster-example
+    
+    Add an in cluster config example
+
+commit f62cff982656c6c7aa9e4d3a06dc509b637114ee
+Author: avi <hi@avi.im>
+Date:   Wed Jun 21 12:03:05 2017 +0530
+
+    Add copyright header
+
+commit 987cda1c71e233f4ba7313a9f2f8ed2d0db6eb5e
+Author: avi <hi@avi.im>
+Date:   Mon Jun 19 13:55:38 2017 +0530
+
+    Add an in cluster config example
+
+commit 5521d8475c8b7aa0cf5afb70c53869c0ed27a628
+Merge: e245dbbd 9cd0b3dc
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jun 15 01:41:45 2017 -0700
+
+    Merge pull request #247 from pokoli/websocket_url
+    
+    Use urlparse to generate websocket url
+
+commit 9cd0b3dc9ae65ac01f19f95e59c821486e7812eb
+Author: Sergi Almacellas Abellana <sergi@koolpi.com>
+Date:   Wed Jun 7 11:05:11 2017 +0200
+
+    Use urlparse to generate websocket url
+    
+    Fixes #246
+
+commit e245dbbd32fc37948523e6c1049cdfefd8eb45c1
+Merge: b2a204cb 0836b854
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Jun 12 02:26:25 2017 -0700
+
+    Merge pull request #245 from mbohlool/doc
+    
+    Add basic submodules documentation
+
+commit 0836b854072fa396f21a6a3d04f09a05759c4ed1
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jun 6 13:50:02 2017 -0700
+
+    Add submodules document to /devel folder
+
+commit b2a204cb71db53a660230e95fd625a8bcd2175f6
+Merge: 93f3f946 cf2e8408
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jun 9 13:27:42 2017 -0700
+
+    Merge pull request #249 from pokoli/submodules_update
+    
+    Update submodule to include user config fixes
+
+commit cf2e8408f5fb5abfc6cd8f339e19f3398e1f02e6
+Author: Sergi Almacellas Abellana <sergi@koolpi.com>
+Date:   Fri Jun 9 10:08:11 2017 +0200
+
+    Update submodule to user config fixes
+    
+    Closes #236
+
+commit 93f3f946764c6f13ff7025ed254ee75ded0d6ee3
+Merge: ff94d26a 20fa5b4d
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jun 8 13:31:33 2017 -0700
+
+    Merge pull request #244 from pokoli/py36
+    
+    Add support for python3.6
+
+commit 20fa5b4ded20fa3a8cb0dbe12401da57459b38b1
+Author: Sergi Almacellas Abellana <sergi@koolpi.com>
+Date:   Tue Jun 6 10:29:48 2017 +0200
+
+    Add support for python3.6
+
+commit ff94d26a2b227387c47d625c3c8b3450626d0544
+Merge: 10362685 e2d3f6d0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Jun 5 02:26:11 2017 -0700
+
+    Merge pull request #238 from pokoli/sync_requirements
+    
+    Read setup.py dependencies from requeriments.txt
+
+commit e2d3f6d096f71ce8341bc17af6a48c5fa0a75fc8
+Author: Sergi Almacellas Abellana <sergi@koolpi.com>
+Date:   Fri Jun 2 10:07:26 2017 +0200
+
+    Add tests requires on setup.py
+
+commit a6870afa60cbed333e60b310cd922c1425f3bbef
+Author: Sergi Almacellas Abellana <sergi@koolpi.com>
+Date:   Fri Jun 2 09:58:08 2017 +0200
+
+    Read setup.py dependencies from requeriments.txt
+    
+    Fixes #136
+
+commit 10362685ea90e7276cc75cc856c3a165caf3e177
+Merge: 84de8489 8a3b2bae
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu May 25 10:05:33 2017 -0700
+
+    Merge pull request #230 from mbohlool/tpr_fix
+    
+    Fix TPRs security issue
+
+commit 8a3b2bae14765c8febcfe2ddd9f332d0747483e0
+Author: mbohlool <mehdy@google.com>
+Date:   Sun May 21 22:43:45 2017 -0700
+
+    Update generated client for TPR fix
+
+commit 19ce362d9f2be33c794d40699779ea32f74982e9
+Author: mbohlool <mehdy@google.com>
+Date:   Sun May 21 22:43:29 2017 -0700
+
+    Fix update client script to ignore kubernetes/base folder
+
+commit bf337a5390edbf4c7a96c21d31f82991de8a8a41
+Author: mbohlool <mehdy@google.com>
+Date:   Sun May 21 22:37:27 2017 -0700
+
+    Fix TPRs security
+
+commit e7a257a9eed32182e20969d5f43926fd35b36099
+Author: mbohlool <mehdy@google.com>
+Date:   Sun May 21 22:36:27 2017 -0700
+
+    Update client (only version changes)
+
+commit 84de8489eb4d91fccd344efbdc898f6b2ac8ea32
+Merge: 38b0ff4e 5eee265f
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Sat May 20 15:42:39 2017 -0700
+
+    Merge pull request #224 from mbohlool/master
+    
+    Update base submodule
+
+commit 5eee265f2591b3143abe8c7c8a2092241ba5a0ee
+Author: mbohlool <mehdy@google.com>
+Date:   Fri May 19 16:52:18 2017 -0700
+
+    Update base submodule
+
+commit 38b0ff4ee3452de6ffbd8baab8a48fc0f3c23c91
+Merge: 87e16bbd 23b0f8c0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri May 19 16:45:15 2017 -0700
+
+    Merge pull request #221 from mbohlool/master
+    
+    Added OperationIDs to TPR spec and regenerated the client
+
+commit 23b0f8c008939c87860d07d3864ec2935b461864
+Author: mbohlool <mehdy@google.com>
+Date:   Fri May 19 15:27:35 2017 -0700
+
+    Update generated client
+
+commit 1672ded330273955ea6ce6688828366c03c0dd8a
+Author: mbohlool <mehdy@google.com>
+Date:   Fri May 19 15:23:06 2017 -0700
+
+    Add OperationIDs to third party resources spec
+
+commit 87e16bbd04ac71ba07ffd0412556b67618243a72
+Merge: dab09e0e 5d5e7df5
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri May 19 15:13:13 2017 -0700
+
+    Merge pull request #222 from mbohlool/sub
+    
+    Add kubernetes-client/python-base as submodule to this repo
+
+commit 5d5e7df528742d4caed051e8649950c6d075eb80
+Author: mbohlool <mehdy@google.com>
+Date:   Fri May 19 00:35:27 2017 -0700
+
+    Update README.md
+
+commit 8980d48039a1df7098c2798646782ce54dbc6cb2
+Author: mbohlool <mehdy@google.com>
+Date:   Fri May 19 00:24:39 2017 -0700
+
+    Add kubernetes-client/python-base as submodule to this repo
+
+commit dd30fe6a705dec298c0e43e1414f555442f89af8
+Author: mbohlool <mehdy@google.com>
+Date:   Fri May 19 00:21:35 2017 -0700
+
+    Remove base folder to prepare for submodule model
+
+commit dab09e0e92ee025a2ff9a43d406b20c234525ac9
+Author: Jonathan Kosgei <jonathan@saharacluster.com>
+Date:   Thu May 18 10:37:30 2017 +0300
+
+    Add support for thirdparty resource watch/create/put and delete operations (#216)
+    
+    Add third-party-resources paths to OpenAPI spec to be able to create/update/watch third party resources.
+
+commit 7a6bae25e37cb3872b650c3a6eb7679985877e04
+Merge: dbe83efe ba61aea1
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue May 16 17:21:21 2017 -0700
+
+    Merge pull request #218 from sebgoa/notebooks
+    
+    move skippbox/notebooks to client-python for GSoC
+
+commit ba61aea1f5fb32e748700c995dac4349df0cbba3
+Author: Sebastien Goasguen <runseb@gmail.com>
+Date:   Tue May 16 19:27:53 2017 +0200
+
+    move skippbox/notebooks to client-python for GSoC
+
+commit dbe83efe0a631a591a0a5a3fc883ef0e646a293a
+Merge: 4729e686 1ebceb64
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu May 11 12:51:09 2017 -0700
+
+    Merge pull request #215 from mbohlool/c3
+    
+    Move config and watch into a base folder to prepare for multi-repo client
+
+commit 1ebceb6460e62ccd82df12431326c11c3b5c4019
+Author: mbohlool <mehdy@google.com>
+Date:   Tue May 9 16:26:27 2017 -0700
+
+    Move manual code to a base folder to prepare for repo splitting.
+
+commit 4729e6865d810824cafa312b4d06dfdb2d4cdb54
+Merge: 70237af6 9b614c3a
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon May 8 09:55:51 2017 -0700
+
+    Merge pull request #207 from gabrielpjordao/patch-1
+    
+    Put whitespaces around equal sign on README
+
+commit 70237af6edec0ebcdad0bf1a9a8a60f5be669405
+Merge: 37c7fa68 c1ad663c
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu May 4 11:06:34 2017 -0700
+
+    Merge pull request #213 from mbohlool/master
+    
+    Switch to stable release of swagger-codegen
+
+commit c1ad663ca0d2927341a16b96a41203ca9e349d93
+Author: mbohlool <mehdy@google.com>
+Date:   Thu May 4 10:56:04 2017 -0700
+
+    Update generated client
+
+commit 735286472c598a43a617a81b0f2a3da623d03773
+Author: mbohlool <mehdy@google.com>
+Date:   Thu May 4 10:54:41 2017 -0700
+
+    Use swagger-codegen 2.2.2 stable
+
+commit 37c7fa682760a9a8f34cc6634fc45d43f0098075
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed May 3 17:39:30 2017 -0700
+
+    Update release.md
+
+commit ada0c2a10bdad135edc91b0972a294869567cb06
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed May 3 17:27:31 2017 -0700
+
+    Update CHANGELOG.md
+
+commit 05d60fc4caa1aee887704b6b70905cb55bccdc8d
+Merge: b5eac1f7 058b81b8
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed May 3 17:25:22 2017 -0700
+
+    Merge pull request #211 from mbohlool/automated-cherry-pick-of-#205-upstream-master
+    
+    Automated cherry pick of #205
+
+commit 058b81b8bde3bed4458ed6e42c5e19b73250bb42
+Author: Benjamin Sherman <benjamin@jivesoftware.com>
+Date:   Sun Apr 30 21:16:31 2017 -0500
+
+    changelog update for #187
+
+commit eaf781c78752c82cfb21c3529f0ad4c458048125
+Author: Benjamin Sherman <benjamin@jivesoftware.com>
+Date:   Thu Apr 27 21:08:50 2017 -0500
+
+    fix for #187 failure when using RFC 6902 json-patch operation
+
+commit b5eac1f7992b96147500c97daf7bd4ab7a0fc6da
+Merge: a2a91bc9 c5347acf
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed May 3 12:27:31 2017 -0700
+
+    Merge pull request #208 from kubernetes-incubator/mbohlool-patch-1
+    
+    Update update-client.sh
+
+commit c5347acfbc5e8b2547a213cf227bf852056c8181
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed May 3 11:37:59 2017 -0700
+
+    Update update-client.sh
+    
+    Generator script post-processing if failing if development status has `/` in it. this is true for stable releases.
+
+commit a2a91bc97ab012ce20cbf15d5c52b6a8358d9063
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed May 3 11:29:42 2017 -0700
+
+    Update CHANGELOG.md
+
+commit 9b614c3a4957586e28c1e6f10395a20e19ef63b2
+Author: Gabriel <gabrielpjordao@gmail.com>
+Date:   Tue May 2 10:00:44 2017 -0300
+
+    Put whitespaces around equal sign on README
+
+commit 1517bcaa1e819560d260018c133b6825084e6c7d
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Apr 26 15:22:42 2017 -0700
+
+    Update CHANGELOG.md
+
+commit 06d2d4b707e5ab788a49624a54b900f6f24dbdde
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Apr 26 14:03:55 2017 -0700
+
+    Update CHANGELOG.md
+
+commit 3f7933050f9bf574fd0d36260aaa23d0b655e57c
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Apr 26 13:58:52 2017 -0700
+
+    Update requirements.txt
+
+commit 3b5569a0d7989e5347e19bc51396db9f980f6bb6
+Merge: 763ada98 7aec646a
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Apr 26 13:52:11 2017 -0700
+
+    Merge pull request #203 from mbohlool/master
+    
+    Exclude urllib3 version 1.21 from depedencies as it breaks our code
+
+commit 7aec646a6d9ac2ae8aca04ccde6fa4bf55feee14
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Apr 26 13:12:16 2017 -0700
+
+    Exclude urllib3 version 1.21 from depedencies as it breaks our code
+
+commit 763ada98fc5c4b664e6acfda7c55c114c7dc958e
+Merge: 2c1535df f5ec7738
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Apr 25 14:27:01 2017 -0700
+
+    Merge pull request #196 from mbohlool/master
+    
+    Remove Spec Version constant as the main spec is versioned now
+
+commit f5ec77383034b047b39ad7446429fadac094166c
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Apr 25 10:43:00 2017 -0700
+
+    Update generated client
+
+commit 07013a0722b8fd30016f00343d8c5d2a01eaa7ef
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Apr 25 10:42:08 2017 -0700
+
+    Remove Spec Version constant as the main spec is versioned now
+
+commit 2c1535dff78bf80ca91178696ffc8c3e76cdf741
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Apr 25 14:05:16 2017 -0700
+
+    Update CHANGELOG.md
+
+commit 2d06710f617943c00d070b52935b96b1aacdf2f6
+Merge: 4a190dd3 bc338504
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Apr 25 13:35:47 2017 -0700
+
+    Merge pull request #198 from mbohlool/dep
+    
+    Depend on urllib3 version <= 1.20
+
+commit bc3385042425dcbb6d6b1fc5d5fcb4490590a6bb
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Apr 25 13:23:15 2017 -0700
+
+    Fix urllib3 dependency to <=1.20
+
+commit 4a190dd3fdb88fabf30d00fe2662076b64118c87
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Apr 25 10:32:57 2017 -0700
+
+    Update CHANGELOG.md
+    
+    V2.0.0b1 release.
+
+commit 68bf13dddbcae6d1b6b4b1fbfac134cf63c1ecd9
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Apr 24 17:29:30 2017 -0700
+
+    Update changelog
+
+commit 5e7cdca568de083f162cc4bf6b19bafc0a15052b
+Merge: ff83fb6b 9e738e44
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Apr 24 14:57:19 2017 -0700
+
+    Merge pull request #186 from mbohlool/cherry
+    
+    Port Kubernetes cherry-pick script
+
+commit 9e738e44bd36370b52899635f2fab57b5390fe6c
+Merge: cba33ac0 ff83fb6b
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Apr 24 14:33:24 2017 -0700
+
+    Merge branch 'master' into cherry
+
+commit ff83fb6b3a0204c9f32460f69da2b9f0cdb8b75d
+Merge: 6e4e33e2 719df761
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Apr 24 12:28:04 2017 -0700
+
+    Merge pull request #191 from mbohlool/changelog
+    
+    Update Changelog
+
+commit 719df761e289e0568f7ec595df7459b1587beb48
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Apr 24 12:27:04 2017 -0700
+
+    Update Changelog
+
+commit 6e4e33e2f9dcb9d936e4e1561495137f6872c0fe
+Merge: 94a276bf 62978935
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Apr 24 12:14:23 2017 -0700
+
+    Merge pull request #190 from mbohlool/changelog
+    
+    Update Changelog
+
+commit 6297893514a04e6bd94ef19bda212ddd2f38c898
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Apr 24 12:13:42 2017 -0700
+
+    Update Changelog
+
+commit 94a276bf68bd4f7528161713b387d01991646690
+Merge: f399ece0 a0577b03
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Apr 24 11:50:05 2017 -0700
+
+    Merge pull request #183 from mbohlool/config
+    
+    BUGFIX: token file should not be decoded
+
+commit cba33ac0d48e126fc114f1acf97eb34377356478
+Merge: f567e828 f399ece0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Apr 24 11:49:53 2017 -0700
+
+    Merge branch 'master' into cherry
+
+commit a0577b03cbedfb328554a2e4dfb673bb9d59f27d
+Merge: 318e551e f399ece0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Apr 24 10:35:55 2017 -0700
+
+    Merge branch 'master' into config
+
+commit f399ece006d43970a9d25052798782db1407fd05
+Merge: e69d4fe2 c8374eb4
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Apr 24 10:35:28 2017 -0700
+
+    Merge pull request #179 from mbohlool/inline
+    
+    Inline primitive models in preprocessing
+
+commit 318e551e37a90e72e34390986d3f585d7e74eeb5
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Apr 19 12:33:32 2017 -0700
+
+    BUGFIX: token file should not be decoded
+
+commit f567e82801f66b3a71604b088bbaaca6081e6b29
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Apr 20 13:48:08 2017 -0700
+
+    Update (and generalize) cherry pick script for client-python
+
+commit 7408d902fc38fecfb58969daf62fbb2b8c259b19
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Apr 20 13:41:52 2017 -0700
+
+    Copy original cherry pick script from kubernetes main repo
+
+commit c8374eb409653e22fff31ba381bd160396719b81
+Merge: cbc4a6d4 e69d4fe2
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Apr 18 11:15:00 2017 -0700
+
+    Merge branch 'master' into inline
+
+commit e69d4fe204b98f7d7ee3ada3996b4f5fbceae5fe
+Merge: 542facbf 7191e0e5
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Apr 18 11:00:48 2017 -0700
+
+    Merge pull request #181 from mbohlool/master
+    
+    Update changelog
+
+commit cbc4a6d46739e5ad42c243d37dd144697c70429b
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Apr 18 10:58:59 2017 -0700
+
+    Fix datatime parsing bug in api_client
+
+commit 7191e0e5ef63fc1d7253741256a80b51afa65eaa
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Apr 18 10:18:35 2017 -0700
+
+    Update changelog
+
+commit 542facbf0798ecea57a47bf53bd05e71bec1d25c
+Merge: 84fdbd76 5a590f8b
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Apr 18 10:17:16 2017 -0700
+
+    Merge pull request #180 from skuda/master
+    
+    add support for attach api call using websockets.
+
+commit 5a590f8b55810107aad599fd2fb1bf5516a46095
+Author: Miguel Angel Rasero <skuda21@gmail.com>
+Date:   Tue Apr 18 11:25:26 2017 +0200
+
+    add support for attach api call using websockets.
+
+commit 84fdbd76096ff9ac6a1077f293f63b6ebc234837
+Merge: 84bf6cc9 8407235e
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Apr 18 09:51:13 2017 -0700
+
+    Merge pull request #178 from mbohlool/master
+    
+    Add compatibility section to README.md
+
+commit 8407235e453280097b683251da77d4ec91b144a3
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Apr 17 11:20:28 2017 -0700
+
+    Add compatibility section to README.md
+
+commit cfc0ff1a0db35a7ce23e7648412b670ac65a24b3
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Apr 17 16:37:09 2017 -0700
+
+    Update client
+
+commit fbdff46af084b39091d39a05f60b340d9b9c394f
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Apr 17 16:35:57 2017 -0700
+
+    Inline primitive models in preprocessing
+
+commit 84bf6cc9dc206cb3314a5b4d2fa1a9c2fa2c5137
+Merge: f37f758f f9f6287a
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Apr 5 15:49:44 2017 -0700
+
+    Merge pull request #170 from mbohlool/master
+    
+    Update generated client
+
+commit f9f6287a147ce369e2034957311ab7c89cf9aa8b
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Apr 5 02:31:20 2017 -0700
+
+    Add CHANGELOG.md entry [ci skip]
+
+commit 35ca453a47e7a329f173acfc1022c278aee9daca
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Apr 4 16:47:22 2017 -0700
+
+    Update client code
+
+commit f41a863d249b0f81ccec03c4e1f3db876086877d
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Apr 4 16:44:51 2017 -0700
+
+    Promote OpenAPI spec version to kubernetes 1.6.1
+
+commit 5d1979957417a8272f9a32204af6b98bdd48edc2
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Apr 4 16:44:28 2017 -0700
+
+    preprocessing script to shorten model names as much as possible
+
+commit f37f758fee399f4f57c3b518a8824ddd138c2236
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Mar 31 02:03:15 2017 -0700
+
+    Update README.md
+
+commit 9eae1a03aa9c372b2ea354b53756c5a000b653a4
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Mar 31 02:01:11 2017 -0700
+
+    Update README.md
+
+commit 00ea1494dc12106e50e04f92a905680308808896
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Mar 31 02:00:09 2017 -0700
+
+    Add kubernetes client badges
+
+commit 74a64d7325518f4298600d4bb300f92843c29347
+Merge: e59d5945 64552448
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Mar 15 01:21:21 2017 -0700
+
+    Merge pull request #158 from mbohlool/master
+    
+    Update README.md with ssl hostname troubleshooting [ci skip]
+
+commit 64552448f32b86f25005c1bd1c25fe13934ac304
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Mar 14 13:31:39 2017 -0700
+
+    Update README.md with ssl hostname troubleshooting [ci skip]
+
+commit e59d59450a1bd30ddcd8c20f7839887e69c97f75
+Merge: 1e669b59 9a0c0795
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Mar 14 13:22:18 2017 -0700
+
+    Merge pull request #147 from WilliamDenniss/master
+    
+    Added OpenSSL version requirement to README.
+
+commit 9a0c0795af84a161973e632693ba2c21a4389699
+Author: William Denniss <will@icog.net>
+Date:   Mon Feb 27 16:36:20 2017 -0800
+
+    Added troubleshooting section to the README.
+    - SSLError on macOS documented.
+
+commit 1e669b59e7d13fd2dafcb857bdef770550e2c6e3
+Merge: 2bd4077a e5e1da35
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Mar 2 17:08:25 2017 -0800
+
+    Merge pull request #153 from kubernetes-incubator/mbohlool-patch-4
+    
+    Add PyPi badges [ci skip]
+
+commit e5e1da351991e8855ab75ea841ce182518e93d83
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Mar 2 17:06:31 2017 -0800
+
+    Add PyPi badges [ci skip]
+
+commit 2bd4077a1376888c71021bd82e413f222a2ced67
+Merge: dc35eee0 cbca7ab3
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Mar 1 13:37:29 2017 -0800
+
+    Merge pull request #150 from mbohlool/master
+    
+    Update CHANGELOG [skip ci]
+
+commit cbca7ab3e25a9ecbfaa140b582254778c11316ce
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Mar 1 13:35:36 2017 -0800
+
+    Update CHANGELOG [skip ci]
+
+commit dc35eee071fdde52bc6a55673a4cb11c1e583e5b
+Merge: 4214b7b0 fd15a7a9
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Feb 28 11:25:01 2017 -0800
+
+    Merge pull request #146 from mbohlool/closemethod
+    
+    Add close method to websocket client
+
+commit fd15a7a972215303456ac1745c6274f4cb7bb444
+Merge: 94861c77 4214b7b0
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Feb 28 11:20:04 2017 -0800
+
+    Merge branch 'master' into closemethod
+
+commit 4214b7b0a10461b1793ad9e0d61b2cc6ea7640db
+Merge: c85b8f57 1fb9c681
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Feb 28 11:19:20 2017 -0800
+
+    Merge pull request #148 from kubernetes-incubator/mbohlool-patch-2
+    
+    Update release.md [skip ci]
+
+commit 1fb9c6818e354cf68088fd9087f68f7f0a5a85d4
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Feb 28 11:18:13 2017 -0800
+
+    Update release.md [skip ci]
+
+commit 94861c777ee288746f043319ac24e3852edc7eba
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Feb 27 12:30:15 2017 -0800
+
+    Add close method to websocket client
+
+commit c85b8f57334d03a174e3ce4597e4da3bc28b7e9d
+Merge: db29d8af 5d4a5286
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Mon Feb 27 12:33:32 2017 -0800
+
+    Merge pull request #143 from kubernetes-incubator/mbohlool-patch-1
+    
+    Update CHANGELOG.md [ci skip]
+
+commit 5d4a5286ed39c3412253aba795f39f5a06598386
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Sun Feb 26 01:17:29 2017 -0800
+
+    Update CHANGELOG.md [ci skip]
+
+commit db29d8af169145cd06ca014427dbfda2073b698b
+Merge: a2b3d5db fc8a31b2
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Feb 24 15:31:31 2017 -0800
+
+    Merge pull request #142 from mbohlool/master
+    
+    Remove channel id from exec response in blocking mode
+
+commit fc8a31b2d179e2e487d06a616f37e980cdb35646
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Feb 24 14:11:29 2017 -0800
+
+    Remove channel id from exec response in blocking mode
+
+commit a2b3d5dbe9702781c1258ca42f0690a01a8cf5e3
+Merge: bfafc408 8dc85df3
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Feb 22 14:37:44 2017 -0800
+
+    Merge pull request #135 from mbohlool/master
+    
+    update CHANGELOG [skip ci]
+
+commit 8dc85df3e5d69c674b72069707a43fdab34a300d
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Feb 22 14:36:58 2017 -0800
+
+    update CHANGELOG [skip ci]
+
+commit bfafc4083e99209357969586e7d0079ece4f92c8
+Merge: 2e5d52e4 6eecfc22
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Feb 22 14:34:27 2017 -0800
+
+    Merge pull request #134 from mbohlool/master
+    
+    Update CHANGELOG [ci skip]
+
+commit 6eecfc22150a485b86c595118e8b3d552f716221
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Feb 22 14:23:00 2017 -0800
+
+    Update CHANGELOG [ci skip]
+
+commit 2e5d52e41dcc9c435e3e2bcb23ae891bdefa0bff
+Merge: 6f03708e 8ac42541
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Feb 22 14:20:59 2017 -0800
+
+    Merge pull request #132 from dims/sync-setup-cfg-and-requirements-txt
+    
+    Sync requirements and add license info
+
+commit 8ac42541163435b915d396622665fb0a834c4c2a
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Wed Feb 22 06:56:29 2017 -0500
+
+    Sync requirements and add license info
+    
+    Follow guidelines in:
+    https://packaging.python.org/requirements/
+    
+    * Make sure the same list of packages are in setup.cfg and
+      requirements.txt
+    * install_requires reqs in setup.cfg should be "Abstract" with
+      no version information
+    * Add License information for each package
+    
+    Fixes #131
+
+commit 6f03708e794d90b4c20a53a3e131d3838dc96451
+Merge: 436351b0 cd3e6848
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Feb 21 15:18:28 2017 -0800
+
+    Merge pull request #129 from kubernetes-incubator/mbohlool-patch-2
+    
+    Update release.md
+
+commit cd3e68483d2094ef7f7b98e114692ecd12b4e491
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Feb 21 14:18:34 2017 -0800
+
+    Update release.md
+
+commit 436351b027df2673869ee00e0ff5589e6b3e2b7d
+Merge: 16351503 88563a66
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Feb 21 13:46:01 2017 -0800
+
+    Merge pull request #125 from mbohlool/exec
+    
+    Improvements on ws_client
+
+commit 88563a6619f325ad62fc9ba549fa0d9fbac48298
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Feb 16 20:43:38 2017 -0800
+
+    Update CHANGELOG
+
+commit 4e593a7530a8751c817cceec715bfe1d03997793
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Feb 15 12:37:43 2017 -0800
+
+    Improvements on ws_client. Now the client can returns an object to interact with websocket server and reach each channel separately
+
+commit 16351503467b763605cb80cf71b863c73224d5ee
+Merge: cfd34ef2 353e8ccd
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Feb 9 13:17:47 2017 -0800
+
+    Merge pull request #123 from dims/try-localkube-for-e2e
+    
+    Switch to minikube/localkube
+
+commit 353e8ccdc8b8ffac6fbdbeb1d508e7efa497f2c8
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Thu Feb 9 13:28:49 2017 -0500
+
+    Switch to minikube/localkube
+    
+    * Drop the old Kubernetes on docker containers method as it
+      did not have a SSL enabled port
+    * Use localkube component from minikube instead. This enables
+      us to drop the hitch TLS proxy as well.
+    * E2E tests should be easy to run locally and pick up configuration
+      from ~/.kube/config
+    * Consolidate the urls in one spot (base.py), also consolidate the
+      SkipTest in one spot.
+    * For local testing, just run minikube and run the py27 or py34 tox
+      target, that should run all the tests including the e2e tests.
+    * Fix the connect_post_namespaced_pod_exec and add a e2e test for it
+    
+    Fixes #122
+
+commit cfd34ef280d3712d4959ec6806688de3c84bcd28
+Merge: 192b67c4 066bba18
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Feb 7 14:49:25 2017 -0800
+
+    Merge pull request #120 from dims/support-exec-calls
+    
+    Implementation for /exec using websocket
+
+commit 066bba1802797b1d7895854ec6fdb51f5a9d8823
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Wed Feb 1 12:34:36 2017 -0500
+
+    Implementation for /exec using websocket
+    
+    inspired by the POC from @chekolyn
+    
+    * Adds a new requirement on websocket-client
+    * Add a new class WSClient that uses WebSocketApp from
+      the websocket-client.
+    * Make sure we pass Authorization header
+    * Make sure we honor the SSL settings in configuration
+    * Some of the code will get overwritten when we generate
+      fresh classes from swagger definition. To remind us
+      added a e2e test so we don't lose the changes
+    * Added a new configuration option to enable/disable failures
+      when hostnames in certificates don't match
+    
+    Fixes #58
+
+commit 192b67c4466c4e1c45f05eb4a1c6a6899e1c279d
+Merge: 1d3cd138 16d6da46
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Feb 7 13:13:53 2017 -0800
+
+    Merge pull request #121 from dims/ssl-based-e2e-tests
+    
+    Run e2e tests against against https url
+
+commit 16d6da465eef537fe81719e4bafdad0c41e9a301
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Tue Feb 7 16:00:33 2017 -0500
+
+    Add comment about hitch ppa
+
+commit 96cfceb2f039623d5827041c9b72e2a9cfb4ec9d
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Fri Feb 3 09:52:40 2017 -0500
+
+    Run e2e tests against against https url
+    
+    Use hitch tls proxy to listen on 8443 port and forward the
+    traffic to 8080. Add a configuration option to ignore any
+    issues with host names as we don't generate the cert on the
+    fly.
+
+commit 1d3cd1384513b78b0cfd40f59e32afb3d7b8a729
+Merge: 3b4aec6b 63301418
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jan 26 06:28:11 2017 -0800
+
+    Merge pull request #115 from dims/add-more-e2e-tests
+    
+    Refactor tests
+
+commit 633014180ef2be51cd42b27d09dcaa8e61b1a4a0
+Merge: 38aaec0f 3b4aec6b
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jan 26 06:17:06 2017 -0800
+
+    Merge branch 'master' into add-more-e2e-tests
+
+commit 38aaec0f479523809f786bd97969f8ff15cf1079
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Wed Jan 25 20:46:36 2017 -0500
+
+    Refactor tests
+    
+    * separate batch, extensions and the regular apis into separate
+    * added delete for some tests
+    * drop '_' for is_k8s_running
+    * remove comments that do not add value
+
+commit 3b4aec6b64dcb13d46fcb400d95ed3e09b1769e6
+Merge: dbf99388 2a321d4d
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jan 26 05:39:58 2017 -0800
+
+    Merge pull request #116 from mbohlool/dev
+    
+    Add download stat how-to page
+
+commit 2a321d4df93c00c7130102227040622e056e11c8
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Jan 26 05:36:10 2017 -0800
+
+    Add download stat how-to page [skip ci]
+
+commit dbf99388741ecf960bd4a5f588ac27ee881bbf01
+Merge: 76de3def f3d4014a
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jan 25 17:24:03 2017 -0800
+
+    Merge pull request #113 from mbohlool/dev
+    
+    Add release process
+
+commit f3d4014a28e389a057fc57b1933cf436c62dda9e
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Jan 25 14:55:52 2017 -0800
+
+    Add release process [skip ci]
+
+commit 76de3def1904653677d4d8cb39cf329f41151257
+Merge: d383faa3 839ce735
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jan 25 14:52:51 2017 -0800
+
+    Merge pull request #110 from dims/more-e2e-tests
+    
+    More e2e tests
+
+commit 839ce73570387fcb65f70a2cac3709760f246828
+Merge: 03731f10 d383faa3
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jan 25 14:51:41 2017 -0800
+
+    Merge branch 'master' into more-e2e-tests
+
+commit d383faa3ebab7cd442c279ba915d67190f1e0e91
+Merge: 13ac5337 f2e6d83d
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jan 25 14:49:40 2017 -0800
+
+    Merge pull request #111 from kubernetes-incubator/mbohlool-patch-1
+    
+    Update CHANGELOG.md
+
+commit f2e6d83d07d91a6d5e4aa6fc21093866a14b512e
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jan 25 14:30:25 2017 -0800
+
+    Update CHANGELOG.md
+
+commit 03731f1003ae62d360d596423843a5bff2f79d4a
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Wed Jan 25 16:44:55 2017 -0500
+
+    Add e2e for deployment and daemonsets
+
+commit cf5d796cf43991149165b8245972989ce8d0a22f
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Wed Jan 25 16:02:06 2017 -0500
+
+    Ability to run e2e tests multiple times
+
+commit 13ac53370735fb1b8115e74cee5f575299fbcb4f
+Merge: 6593d3a4 68e3231a
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jan 25 02:25:37 2017 -0800
+
+    Merge pull request #108 from mbohlool/example
+    
+    Add example to create a deployment from yaml file
+
+commit 68e3231a80d235d3909598ef321da3a8bae6d5ac
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jan 24 16:12:47 2017 -0800
+
+    Add example to create a deployment from yaml file
+
+commit 6593d3a43f29a01d8024d198a4d2cc1d943a2848
+Merge: f10f4f32 8fc978e4
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jan 24 18:03:58 2017 -0800
+
+    Merge pull request #107 from mbohlool/master
+    
+    Support insecure-skip-tls-verify config flag
+
+commit 8fc978e49f520c89101676f542c1e5cf825d7202
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jan 24 14:47:20 2017 -0800
+
+    Support insecure-skip-tls-verify config flag
+
+commit f10f4f32cd06904c7c6dced0535b6ddfae7bb342
+Merge: a3e922af 1e48433b
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jan 24 02:14:25 2017 -0800
+
+    Merge pull request #106 from dims/fix-value-error
+    
+    Fix ValueError in list_namespaced_config_map
+
+commit 1e48433b158468330d95f2f30834721bff83dc4a
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Mon Jan 23 11:39:04 2017 -0500
+
+    Fix ValueError in list_namespaced_config_map
+    
+    Make sure we set an empty dict/list if we don't get
+    any data from the server
+    
+    Fixes #104
+
+commit a3e922afb025cec1d84311965b6731dae03c130e
+Merge: 4c3aced2 9c6c9656
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Sat Jan 21 01:50:59 2017 -0800
+
+    Merge pull request #98 from dims/fix-patch-tests
+    
+    Fix for patch_* to work
+
+commit 9c6c96564b3cc36256c328c1f71dc60fe9512ec5
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Sat Jan 14 13:56:57 2017 -0500
+
+    Fix for patch_* to work
+    
+    Hack/workaround to get patch_namespaced_config_map and patch_namespaced_service
+    etc to work by essentially switching over the content-type from:
+    application/json-patch+json
+    to:
+    application/strategic-merge-patch+json
+    
+    Fixes #93
+
+commit 4c3aced24423b7da073f755286b269a9aad2d747
+Merge: daa05629 c05b50c4
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jan 20 14:12:42 2017 -0800
+
+    Merge pull request #103 from mbohlool/master
+    
+    Bugfix: kubernetes/client/__init__.py was not updated resulting in not exported models
+
+commit c05b50c4ff57843ab4c9c59a3d0ffe1f21646e44
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Jan 19 13:44:30 2017 -0800
+
+    Bugfix: kubernetes/client/__init__.py was not updated resulting in not exported models
+
+commit 98dc69105fb0016b87f9012cac430e7248a6a538
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Jan 19 13:36:07 2017 -0800
+
+    Update client with no change. Mostly formatting update in generator code
+
+commit daa056294d0d15adaf4537dd827fe60cc9600fa0
+Merge: c8b0968d 28181d7e
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jan 17 14:16:39 2017 -0800
+
+    Merge pull request #100 from dims/cleanup-references-to-k8sclient
+    
+    cleanup: rename k8sclient->client
+
+commit 28181d7ee95de77508cac11bfa8eedecaebac2b4
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Mon Jan 16 14:45:02 2017 -0500
+
+    cleanup: rename k8sclient->client
+
+commit c8b0968d508323ef2f61a1382c3713842d147983
+Merge: 37d20f2f 8d4cd145
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jan 13 11:23:48 2017 -0800
+
+    Merge pull request #96 from dims/enforce-doc-builds
+    
+    Test if docs can be built
+
+commit 8d4cd145154d9ab46d57e6605d834145ce31a5a1
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Thu Jan 12 16:52:19 2017 -0500
+
+    Test if docs can be built
+
+commit 37d20f2fe74bb19864230d2a5ada46c8b5788197
+Merge: c147f665 5c823098
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Fri Jan 13 02:40:30 2017 -0800
+
+    Merge pull request #97 from dims/enforce-update-pep8
+    
+    tox target to enforce pep8
+
+commit 5c823098409695fc2c7525cd1416fad68c6e83e2
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Thu Jan 12 16:40:37 2017 -0500
+
+    tox target to enforce pep8
+
+commit c147f665b467cd241693de424e00b706fbc98215
+Merge: ce8e0822 010af62b
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Thu Jan 12 12:48:03 2017 -0800
+
+    Merge pull request #94 from dims/add-functional-test
+    
+    Add functional test
+
+commit 010af62b7694f40d48114cc8221604bd3d24ac26
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Tue Jan 10 19:21:43 2017 -0500
+
+    Add functional test
+    
+    Port a bunch of tests from python-k8sclient repository. There
+    is a script that starts a real instance of kubernetes and
+    the tests are executed against it.
+    
+    Note, if you just have k8s accessible in your localhost:8080, the
+    tests still run. so you don't really need to run "py27-functional"
+    which runs the kube-init.sh
+    
+    Also, 2 API calls fail currently, i've added a TODO so we can
+    dig into them and fix them
+
+commit ce8e08226d6454e475a59d60d1ea13fed9cf6eea
+Merge: 3220a96b 0ca9210d
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Jan 11 22:50:18 2017 -0800
+
+    Merge pull request #95 from dims/initial-documentation
+    
+    Initial cut at documentation
+
+commit 0ca9210d313d628421e45d6cd90b7339900eed35
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Wed Jan 11 09:07:42 2017 -0500
+
+    Initial cut at documentation
+
+commit 3220a96bc6f7ed264ec16371f246e9b3b70a7637
+Merge: cb8aadcc a0b391ab
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jan 10 14:13:33 2017 -0800
+
+    Merge pull request #92 from mbohlool/master
+    
+    Kubernetes is not a valid value for Environment classifier in setup.py
+
+commit a0b391abc1a5cdf311c2c5cf0d69b83d73cfbddd
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jan 10 14:10:23 2017 -0800
+
+    Kubernetes is not a valid value for Environment classifier in setup.py
+
+commit cb8aadcc817934c69ad8f8c1763eddf211b48289
+Merge: cd2342dc 97c804ac
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jan 10 13:55:03 2017 -0800
+
+    Merge pull request #91 from mbohlool/master
+    
+    Update changelog
+
+commit 97c804ac593fff2dba7afd71897aeee6f43309bd
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jan 10 13:38:18 2017 -0800
+
+    Update changelog
+
+commit cd2342dc2e220eff42040f82d4f53f3b5d108cd6
+Merge: a25d5eb7 b971b6b5
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jan 10 13:23:48 2017 -0800
+
+    Merge pull request #90 from mbohlool/master
+    
+    Update generated client after bugfix kubernetes/kubernetes#39465
+
+commit b971b6b5d1ec9b4d918d2f33c3cc7e0093ba8212
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jan 10 13:11:53 2017 -0800
+
+    Update generated client after bugfix kubernetes/kubernetes#39465
+
+commit 1c563ec07321d97f0af412d8691f5d29e580ef2a
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jan 10 13:19:29 2017 -0800
+
+    Update spec version to latest spec in k8s 1.5 release
+
+commit a25d5eb7cc673a258b6759f5a73aeb96b1980f96
+Merge: 420d491b 58aa1650
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jan 10 11:42:24 2017 -0800
+
+    Merge pull request #89 from mbohlool/master
+    
+    Extract DevelopmentStatus as a constant to scripts/constants.py
+
+commit 58aa16506e8c659508ecd5040d2a25b10b23453d
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jan 10 10:43:14 2017 -0800
+
+    Extract DevelopmentStatus as a constant to scripts/constants.py
+
+commit 420d491bdafae45535ce4b981881cdf653840b70
+Merge: d7f33ec5 d3a2d60d
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jan 10 10:34:16 2017 -0800
+
+    Merge pull request #88 from dims/support-python35
+    
+    Run Tests with python 3.5
+
+commit d3a2d60d3eb19338d626965574ccee2d8fb2d486
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Tue Jan 10 10:06:39 2017 -0500
+
+    Add classifiers to setup.py
+    
+    Add some classifiers for better metadata/information on pypi
+
+commit 9266f7c4571fcd0c32779c222f5b09cdbbbd77e9
+Author: Davanum Srinivas <davanum@gmail.com>
+Date:   Tue Jan 10 09:26:21 2017 -0500
+
+    Run Tests with python 3.5
+    
+    Update tox.ini and .travis.yml to support python 3.5
+
+commit d7f33ec53e302e66674df581904a3c5b1fcf3945
+Merge: 6b84ac65 68e6fd2b
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Tue Jan 3 14:13:14 2017 -0800
+
+    Merge pull request #84 from mbohlool/master
+    
+    Update release steps to add source distribution
+
+commit 68e6fd2bbc48c0a5f14d754ead39af6a63f15495
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Jan 3 14:09:12 2017 -0800
+
+    Update release steps to add source distribution
+
+commit 6b84ac6599a6ea5d255a24a1a3e33e8b3f93b298
+Merge: 6060d1c3 ac036421
+Author: Mehdy Bohlool <mehdy@google.com>
+Date:   Wed Dec 28 14:19:35 2016 -0800
+
+    Merge pull request #82 from mbohlool/master
+    
+    Stop exporting scripts folder
+
+commit ac036421735f004a65d1bd7109b08239228f5065
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Dec 28 03:51:17 2016 -0800
+
+    Stop exporting script folder
+
+commit 6060d1c33adb6c10cde7b36b3d55813827303791
+Merge: 9d5a68d9 610a1f57
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Dec 28 03:51:48 2016 -0800
+
+    Merge pull request #80 from mbohlool/master
+    
+    document release steps in a bash file
+
+commit 610a1f5794f10e4d2b9b0b16feb96e37e947c7da
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Dec 27 17:13:17 2016 -0800
+
+    document release steps in a bash file.
+
+commit 9d5a68d9fdbc81fd6873323c1b5636f25115cda6
+Merge: 508390f7 aac5d71b
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Dec 27 16:52:49 2016 -0800
+
+    Merge pull request #78 from mbohlool/bugfix
+    
+    Bugfix: fix bearer token
+
+commit aac5d71b39bc0f782b752304e138f78103384f5e
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Dec 27 16:33:54 2016 -0800
+
+    Bugfix: Bearer token should have 'bearer ' prefix
+
+commit 508390f75f0e472f9e63ff71a3584f3d045ea5d1
+Merge: bb6123d3 9f496564
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Dec 21 00:30:20 2016 -0800
+
+    Merge pull request #76 from mbohlool/master
+    
+    Fix package's long description
+
+commit 9f496564dc41fb97a872f85e791cc851b1357340
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Dec 20 14:35:42 2016 -0800
+
+    Fix package's long description
+
+commit bb6123d30d9175dcd83760e1c3f1e9dd52304f4c
+Merge: eb4fc883 5bd8e7d4
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 19 16:22:03 2016 -0800
+
+    Merge pull request #75 from kubernetes-incubator/mbohlool-patch-2
+    
+    Update CHANGELOG.md
+
+commit 5bd8e7d4213baa4f07aee634eae2044807b95ea1
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 19 16:20:04 2016 -0800
+
+    Update CHANGELOG.md
+
+commit eb4fc8833c5c89d3b1e45906f065c708066e73a5
+Merge: f125cc49 ce5b1dd0
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 19 14:24:52 2016 -0800
+
+    Merge pull request #72 from mbohlool/master
+    
+    Fix changelog version to snapshot for master
+
+commit ce5b1dd0b7bd6d8e7e618323085bf373897d2ff8
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 19 14:20:58 2016 -0800
+
+    Fix changelog version to snapshot for master
+
+commit f125cc4959fde1cf1bda6fa2e38faca5e88ec5db
+Merge: 729d543f 8c26b4b7
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 19 14:17:44 2016 -0800
+
+    Merge pull request #71 from mbohlool/multiple
+    
+    Support connecting to multiple clusters
+
+commit 8c26b4b75b2c6b159de7f75802f844a59571a87c
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 15 18:44:17 2016 -0800
+
+    Support connecting to multiple clusters
+
+commit 729d543f6decd6bdd7f865ac00d6e5c35e49e872
+Merge: 8d536e66 4d14edb7
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 15 14:49:31 2016 -0800
+
+    Merge pull request #64 from mbohlool/c4
+    
+    Add default kube config location
+
+commit 4d14edb75780564eced1c74831de520ae914feab
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Dec 13 16:52:22 2016 -0800
+
+    Add default kube config location
+
+commit 8d536e66428692ecf7a8a053fd6c27f40ceb0f38
+Merge: 0b6fb4cf b9d2b50f
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 15 14:34:14 2016 -0800
+
+    Merge pull request #69 from mbohlool/c6
+    
+    Bugfix: Python client does not resolve relative paths in kubeconfig
+
+commit b9d2b50ff64a30d72e9d6ef5517908a94826f20a
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 15 12:15:17 2016 -0800
+
+    Update CHANGELOG
+
+commit a429afe91d7f1e3a1eaa7151348e47ae5e22aaf8
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 15 11:32:40 2016 -0800
+
+    Resolving cert files relative path using kube-config file path.
+
+commit 0b6fb4cf25197ba694dc7a66c3ecbf1bd3861669
+Merge: 25f02118 4d3307bf
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Dec 14 18:45:23 2016 -0800
+
+    Merge pull request #67 from mbohlool/c5
+    
+    Fix failing setup.py
+
+commit 4d3307bf7d49f6eeb2fd8b55ad3b293c339bc76b
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Dec 14 18:21:07 2016 -0800
+
+    Fix failing setup.py
+
+commit 25f0211854ea198b006138a9ac8574fe7e0a2a55
+Merge: be854fe3 38888d34
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Dec 14 10:52:04 2016 -0800
+
+    Merge pull request #65 from webwurst/patch-1
+    
+    Add missing parentheses to print()
+
+commit 38888d34506b743a06aa93f5dc6c187844774d58
+Author: Tobias Bradtke <webwurst@gmail.com>
+Date:   Wed Dec 14 12:50:06 2016 +0100
+
+    Add missing parentheses to print()
+
+commit be854fe3bf70109a20da10729174803f62dd5dea
+Merge: 00a19bd3 a3d22b98
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 12 23:42:48 2016 -0800
+
+    Merge pull request #60 from kubernetes-incubator/c2
+    
+    Add CHANGELOG.md
+
+commit a3d22b98260a0d8079a1b7406c4a1380aa2da67d
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Dec 7 22:21:33 2016 -0800
+
+    Add CHANGELOG.md
+
+commit 00a19bd3080d14ba5316a5e48ce9e6c280ebfbec
+Merge: 21f65ee2 69d0d5c5
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 12 23:40:38 2016 -0800
+
+    Merge pull request #61 from mbohlool/c1
+    
+    Pass clinet version to client generator
+
+commit 69d0d5c5bb538e4453724ea922c230bffc963f83
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 12 23:35:56 2016 -0800
+
+    Update generated client
+
+commit 2944e5b62c570ef72358c17da13bc50aa9ea60ba
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 12 23:33:57 2016 -0800
+
+    Set versions to snapshot for non-release branches
+
+commit a7c3b634db09b011709fc75a0028e35841c99488
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 12 23:33:00 2016 -0800
+
+    Pass client version to client generator
+
+commit 21f65ee26da518773fc1e067d12afea36c10d9c2
+Merge: baba523c 41490c80
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Dec 12 22:10:51 2016 -0800
+
+    Merge pull request #59 from kubernetes-incubator/c1
+    
+    Download OpenAPI spec directly from k8s release branch
+
+commit 41490c80cb0a1d01c1ccac7d67030dbff973c535
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Dec 7 21:45:38 2016 -0800
+
+    Update client
+
+commit 4c14ab38bb8f89d1e3ee68841ce4f8a4585c7647
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Dec 7 21:44:58 2016 -0800
+
+    Download OpenAPI spec directly from k8s release branch
+
+commit baba523c28a684b3f537502977d600dedd1f17c5
+Merge: d5153bc9 c5d69522
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Dec 2 16:28:26 2016 -0800
+
+    Merge pull request #56 from kubernetes-incubator/mbohlool-patch-1
+    
+    Update README.md file with a link to SIG API Machinery
+
+commit c5d69522589060697caf14987e0eb3a2163c7e1a
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Dec 2 16:23:42 2016 -0800
+
+    Update README.md file with a link to SIG API Machinery
+
+commit d5153bc990bd789dd2567269939edf4aaa1c877d
+Merge: 56775783 2220b7e0
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 1 23:59:39 2016 -0800
+
+    Merge pull request #54 from kubernetes-incubator/o7
+    
+    Adding codecov.io report and badge
+
+commit 2220b7e0c6c79a2c71a6b8943c964a3ce2bd8d82
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 1 01:55:24 2016 -0800
+
+    Add code test coverage for non-generated packages
+
+commit 5677578313394d228fa172a6189a4b0cd9697cc3
+Merge: 812125f9 b888000b
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 1 16:11:30 2016 -0800
+
+    Merge pull request #50 from kubernetes-incubator/o6
+    
+    Kube config loader improvement
+
+commit b888000b4a8656b9589c13e2c87dc61731c16aee
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 30 03:33:38 2016 -0800
+
+    - Add context switch to kube config loader
+    - Refactor kube config loader to be able to test it
+    - Add test for kube config loader
+
+commit acc07d720b7cfbf2b5caaf99e46d7d06fb6c950d
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 30 04:11:19 2016 -0800
+
+    incluster_config loader should fail on empty host/port or cert/token file
+
+commit 66e4f5ff704751a30d75a2da1bf207c7c33fed19
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 30 03:33:03 2016 -0800
+
+    Move ConfigException out of incluster_config and in it's own file
+
+commit 812125f9f21454542f016410e505d44b6fbf8fea
+Merge: 738dcde5 b088fe01
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 1 01:48:39 2016 -0800
+
+    Merge pull request #53 from kubernetes-incubator/fix
+    
+    Fix examples syntax error
+
+commit b088fe017f64635152769d9e295567a6205427b3
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 1 01:28:20 2016 -0800
+
+    Fix examples syntax error
+
+commit 738dcde51c7fb49166d3cad594a9477b9c07cd22
+Merge: ff9295b9 699d71cf
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Dec 1 01:14:16 2016 -0800
+
+    Merge pull request #51 from SEJeff/patch-1
+    
+    Make the README example code more portable
+
+commit 699d71cfac533c27d4afd2462f36c047c2eb7297
+Author: Jeff Schroeder <jeffschroeder@computer.org>
+Date:   Wed Nov 30 19:43:34 2016 -0600
+
+    Make example code using `config.load_kube_config()` more portable
+
+commit 9850b70283c47ce8f8ac1d28b1f49c89ec480813
+Author: Jeff Schroeder <jeffschroeder@computer.org>
+Date:   Wed Nov 30 13:03:25 2016 -0600
+
+    Make the README example code more portable
+    
+    Also, the `$HOME` variable can be modified while `os.path.expanduser()` does the right thing.
+    
+    This works on windows as well whereas the previous code did not.
+
+commit ff9295b96717f81528811d7043f78f0fd44faf4c
+Merge: e7f30fac d0635ccd
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Nov 28 11:18:42 2016 -0800
+
+    Merge pull request #47 from sebgoa/readme
+    
+    README improvements
+
+commit d0635ccdf3507585b098364747eb8ed9c323041c
+Author: sebgoa <runseb@gmail.com>
+Date:   Sat Nov 26 18:01:21 2016 +0100
+
+    README improvements
+
+commit e7f30fac1bf4dc3fc26432b8f0a6287a45372316
+Merge: e3df5172 000c873f
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 14:11:40 2016 -0800
+
+    Merge pull request #45 from kubernetes-incubator/o5
+    
+    Update version to alpha.2 as alpha.1 is used for a failed release
+
+commit 000c873f75da0d2c7ac917513d2897f5d6cead42
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 14:07:39 2016 -0800
+
+    Update version to alpha.2 as alpha.1 is used for a failed release
+
+commit e3df5172e7ebd9e8fa0f25ff0ca5cc50fcee2914
+Merge: c7b28334 bc301e25
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 14:00:58 2016 -0800
+
+    Merge pull request #44 from kubernetes-incubator/o5
+    
+    Set package version in generated code
+
+commit bc301e25cf824a6114f0b61de19008103488884c
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 13:59:08 2016 -0800
+
+    Set package version in generated code
+
+commit c7b283348d73ba9ead43b62903f62689209eb202
+Merge: 22e27377 f6e417df
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 13:52:39 2016 -0800
+
+    Merge pull request #43 from kubernetes-incubator/o5
+    
+    Add ipaddress as a dependency.
+
+commit f6e417df603f4c755376a1d32c31cc3fd73ed8fc
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 13:36:33 2016 -0800
+
+    Add ipaddress as a dependency. urllib3 will fix ssl ipaddress hostnames if this package exists
+
+commit b2f2f5ad23fe6697254a72d890a4dde375f3a807
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 13:34:52 2016 -0800
+
+    Update formatting with scripts/update-pep8.sh
+
+commit 22e2737789bc3fa11dbf40e9f323c3972fa93a3c
+Merge: 9506c55a d42d43d5
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 12:21:41 2016 -0800
+
+    Merge pull request #42 from kubernetes-incubator/o5
+    
+    Update versions
+
+commit d42d43d53923b791aa8b0af8456ee9b4942f3263
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 10:57:19 2016 -0800
+
+    Update generated client with changed spec version
+
+commit 9009bc0c303fa347cdb6783d5596d2bb70fa260a
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 10:57:01 2016 -0800
+
+    Update OpenAPI spec version
+
+commit 7ed785639102eef848634bb5230de5b2a64981ed
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 10:56:44 2016 -0800
+
+    Update package version
+
+commit 9506c55af7820704f47fc060153890c43bbe7c06
+Merge: 149d0ad7 ba3e22a7
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 23 10:57:53 2016 -0800
+
+    Merge pull request #32 from kubernetes-incubator/o4
+    
+    Add in-cluster config support
+
+commit ba3e22a7ac8c1874f12a6a5f6577558ad21bbb4a
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 02:41:37 2016 -0800
+
+    Add incluster config support
+
+commit 149d0ad7ef80efecbaef0f31a03937a69c82368d
+Merge: 44395d42 26ac2c4a
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 17:55:04 2016 -0800
+
+    Merge pull request #35 from kubernetes-incubator/o1
+    
+    Separate package util into config and watch package
+
+commit 26ac2c4a12cb69daa81cc5fab321e190217f5040
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 17:52:46 2016 -0800
+
+    Separate package util into config and watch package
+
+commit 44395d4241a5dd6c5d0f288c29c3c5045ed568b5
+Merge: 880091df b71a00da
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 17:34:30 2016 -0800
+
+    Merge pull request #31 from kubernetes-incubator/o1
+    
+    Restructure modules to have a top level kubernetes module
+
+commit b71a00dab79f34f00d4d7efc747ae1a9d439f27d
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 17:11:47 2016 -0800
+
+    Update package information in setup.py
+
+commit ff365db2bf1398386fd4ead3f466e6ff3dd3a5e9
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 16:59:57 2016 -0800
+
+    Update README.md file
+
+commit cafbdf0dee7860d8f43e36a64c3a8f4041342a8e
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 16:58:05 2016 -0800
+
+    Update examples
+
+commit b715e998b035feb0273d74038839e8ba9874aef8
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 15:25:54 2016 -0800
+
+    Export util and client modules in top level kubernetes module
+
+commit 47340d13d07d2091fb62a1baa7d8de22b7b6c649
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 15:24:10 2016 -0800
+
+    Move k8sutil to kubernetes/util and update imports
+
+commit c120630aa3664e13e0af71367e71e6c837451e74
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 15:19:05 2016 -0800
+
+    Update/move generated client
+
+commit aa671e29463b9da83fc4c6693713db16ddb8efa0
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 22 15:16:03 2016 -0800
+
+    Update generate script to generate client in a new subdirectory
+
+commit 880091df55ad89cca090f53617daa071d72c4e55
+Merge: 9e2e8e41 26b815f0
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Nov 21 15:23:16 2016 -0800
+
+    Merge pull request #9 from kubernetes-incubator/o2
+    
+    Remove watch_* operations in favor of "list_*(watch=True)"
+
+commit 26b815f083ae07b120106495d85b71726207225c
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 16 17:15:00 2016 -0800
+
+    Generated client
+
+commit 869fd7b6b9d69d66e31320b5a3d07f8fe0622016
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 16 17:14:48 2016 -0800
+
+    Add preprocessing step to remove watch_* operations in favor of list_*(watch=True)
+
+commit 9e2e8e414bd5e7277343a039641873d3bf22ce0b
+Merge: 1ffd2f78 4c71e299
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Nov 21 13:23:45 2016 -0800
+
+    Merge pull request #29 from kubernetes-incubator/gen
+    
+    Update generated client with latest changes in k8s
+
+commit 4c71e299ac453dd86a0e09f93a3df15d1789efa5
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Nov 21 13:21:06 2016 -0800
+
+    Update generated client with latest changes in k8s
+
+commit 1ffd2f78af490bc264e507f7f1947b70f0d0be8e
+Merge: 76bd09d5 8ac9715c
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Nov 21 12:52:09 2016 -0800
+
+    Merge pull request #28 from kubernetes-incubator/o5
+    
+    Update CONTRIBUTING.md
+
+commit 8ac9715c3178a978edc6df3a889545e67c89783b
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Nov 21 12:48:45 2016 -0800
+
+    Update CONTRIBUTING.md
+
+commit 76bd09d515fc9d18f35f541a2e2039349cb8743f
+Merge: d466aa32 3e9c0b03
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Nov 21 12:27:49 2016 -0800
+
+    Merge pull request #27 from kubernetes-incubator/gen
+    
+    Update generated client
+
+commit 3e9c0b03b94c14434c6ed6883acdfb71182997f3
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Nov 21 10:52:12 2016 -0800
+
+    Update generated client
+
+commit d466aa321aac68e2a6ed681c0be9285268681c75
+Merge: 0dc08c28 adb075e6
+Author: mbohlool <mehdy@google.com>
+Date:   Sat Nov 19 01:22:07 2016 -0800
+
+    Merge pull request #24 from kubernetes-incubator/o1
+    
+    Updating CONTRIBUTING.md SLA links
+
+commit adb075e6748b28859d5711e2a94b880b545e9a5d
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Nov 18 13:47:12 2016 -0800
+
+    Updating CONTRIBUTING.md SLA links
+
+commit 0dc08c28ff46196117bc6586f29288e914dd5f72
+Merge: 11beb7f5 aade05f8
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Nov 18 11:33:31 2016 -0800
+
+    Merge pull request #21 from kubernetes-incubator/o1
+    
+    Add license header to preprocess_spec.py
+
+commit aade05f83991e339feba44c45ab8f3424a098002
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Nov 18 11:31:25 2016 -0800
+
+    Add license header to preprocess_spec.py
+
+commit 11beb7f54ce01cdf8a46db6ac965d34fe3e659b8
+Merge: 50bc82ea 4d336cc4
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Nov 18 11:28:48 2016 -0800
+
+    Merge pull request #20 from kubernetes-incubator/o1
+    
+    Add templates from kubernetes/kubernetes-template-project with modifications
+
+commit 4d336cc4286a08747ee7ebd2bb4d4212ced9f11f
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Nov 18 11:23:59 2016 -0800
+
+    Add templates from kubernetes/kubernetes-template-project with modifications
+
+commit 50bc82eaabb2d5605aa0d3e4837897e5e81b3147
+Merge: 50a97d13 754b570b
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Nov 18 10:49:49 2016 -0800
+
+    Merge pull request #19 from kubernetes-incubator/o4
+    
+    Add build badge
+
+commit 754b570b8e48ccc088ed018decd1b4d32bec4463
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Nov 18 10:07:54 2016 -0800
+
+    formatting test files
+
+commit ab46b99f5b61c12bf7ee66512f879694dfae8172
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Nov 18 10:07:36 2016 -0800
+
+    Add build badge to README file
+
+commit 50a97d13f263cf40441100389ecb67238bbaec98
+Merge: 848becd4 5c873385
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Nov 17 19:23:52 2016 -0800
+
+    Merge pull request #12 from kubernetes-incubator/o3
+    
+    Adding back generated test as they make sure the generated client is buildable
+
+commit 5c873385079e9b3e527de5c12595388ab3ab6351
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Nov 17 15:58:12 2016 -0800
+
+    Adding back generated test as they make sure the generated client is buildable
+
+commit 848becd4728660fe4868247f50c0d4fbae5bc6b9
+Merge: 4456142c 2eec0e42
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Nov 17 15:50:46 2016 -0800
+
+    Merge pull request #11 from kubernetes-incubator/o3
+    
+    update travis config
+
+commit 2eec0e4219d1585dfcf2c97621a569d25cc086f2
+Author: mbohlool <mehdy@google.com>
+Date:   Thu Nov 17 14:50:26 2016 -0800
+
+    update travis cofig
+
+commit 4456142cbe3eb1d61a04d3d0abe1afb5deb33306
+Merge: 62dc3492 8ea2e4b9
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 16 17:21:17 2016 -0800
+
+    Merge pull request #10 from kubernetes-incubator/o1
+    
+    Code generator should not overwrite test-requirements.txt
+
+commit 8ea2e4b9806c43589fbcc246add6c7c4d20b5205
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 16 17:20:24 2016 -0800
+
+    Code generator should not overwrite test-requirements.txt
+
+commit 62dc3492a930e6f370108217e52fa1e3366f6ef0
+Merge: d67df30f 273684c6
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 16 16:24:54 2016 -0800
+
+    Merge pull request #2 from kubernetes-incubator/o2
+    
+    Client enhancements
+
+commit 273684c60102440b0a6b29beff9d17a61959154e
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 16 15:41:00 2016 -0800
+
+    Add semi-auto code formatting script
+
+commit 98e675ec3c0365802e2583fff06b3086114e9034
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 16 04:19:07 2016 -0800
+
+    Add dependency to a newer version of urllib3 that fixes ssl host check with ipaddress
+
+commit 4e8cca08d3e435b1b0e38ea5c213f44fb504456c
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 15 17:38:48 2016 -0800
+
+    Add github repo information to the generator config
+
+commit db2f4fbcd8a7c71ad34d953aa69cf0445c345235
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 15 16:22:02 2016 -0800
+
+    Add examples
+
+commit 3ad3c5df9402e1b39be3de773c724207fdcca375
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 16 06:11:50 2016 -0800
+
+    Add watch test
+
+commit 750c9eaba4dd7e692edb4d2d7d842e05452d92a7
+Author: mbohlool <mehdy@google.com>
+Date:   Fri Nov 11 03:20:48 2016 -0800
+
+    Add watch stream support
+
+commit 033e180ff35e815800f664186cd21af45d63f205
+Author: mbohlool <mehdy@google.com>
+Date:   Tue Nov 15 03:27:50 2016 -0800
+
+    Add kube config support
+
+commit 634a1b9d3f39882f42770cb39b9f0d8a7077f2e2
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 9 14:16:24 2016 -0800
+
+    Update generated client
+
+commit 117cceb5377049d525c0c6dcb290bcd3cc1ab205
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 9 14:05:11 2016 -0800
+
+    Add generation preprocess step to make OperationIDs simpler
+
+commit a37bc3a2d1102f3e19134c6040472f8a2dd3788b
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Nov 14 16:28:34 2016 -0800
+
+    Remove empty generated tests
+
+commit d67df30f635231d68dc4c20b9b7e234c616c1e6a
+Merge: b19ddd69 69b1cb1a
+Author: mbohlool <mehdy@google.com>
+Date:   Wed Nov 2 15:44:36 2016 -0700
+
+    Merge pull request #1 from kubernetes-incubator/o1
+    
+    Add initial version of generating script and the generated client
+
+commit 69b1cb1a3552463a7e291537434839ef11d34997
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Oct 31 13:28:07 2016 -0700
+
+    Generated client
+
+commit 0558a5844c5e2f8813e6e03042e847e996fdca48
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Oct 31 13:12:24 2016 -0700
+
+    Add client generation script
+
+commit b19ddd690db15ccf701c18289c6bf28f7cb44a18
+Author: mbohlool <mehdy@google.com>
+Date:   Mon Oct 31 13:34:41 2016 -0700
+
+    Initializing repo.
